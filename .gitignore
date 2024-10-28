@@ -1,0 +1,3 @@
+# Ignore Helix embedded repositories
+helix/.config/helix/runtime/grammars/sources/
+
