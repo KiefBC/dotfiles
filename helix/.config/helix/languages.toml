@@ -1,0 +1,67 @@
+# This means we only build and/or fetch these specific languages
+# use-grammars = { only = [ "rust", "c", "cpp" ] }
+
+[[language]]
+# DO NOT FORGET: cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+name = "cpp"
+auto-format = true
+# Using clang-format-15 for ARM64
+formatter = { command = 'clang-format-15', args = ["--style=Google"] }
+language-servers = [ "clangd" ]
+
+[[language]]
+name = "html"
+formatter = { command = 'npx', args = ["prettier", "--parser", "html"] }
+language-servers = ["tailwindcss-ls", "vscode-html-language-server", "emmet-lsp"]
+
+[[language]]
+name = "css"
+formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
+language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
+
+[[language]]
+name = "javascript"
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"]  }
+language-servers = [{ except-features = ["format"], name = "typescript-language-server"}, "biome"]
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"]  }
+language-servers = [{ except-features = ["format"], name = "typescript-language-server"}, "biome"]
+auto-format = true
+
+[[language]]
+name= "jsx"
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+language-servers = [{ except-features = ["format"], name = "typescript-language-server" }, "emmet-lsp", "tailwindcss-ls", "biome"]
+auto-format = true
+
+[[language]]
+name= "tsx"
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+language-servers = [{ except-features = ["format"], name = "typescript-language-server" }, "emmet-lsp", "tailwindcss-ls", "biome"]
+auto-format = true
+
+#[[language]]
+#name = "python"
+#language-servers = [{ command = "pylsp", args = ["--stdio"] }]
+#formatter = { command = "black", args = ["--line-length", "79"] }
+
+[[language]]
+name = "rust"
+auto-format = true
+formatter = { command = "rustfmt" }
+#language-servers = [ "rust-analyzer" ]
+
+[language-server.emmet-ls]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+# Using installed clangd-15 over regular clangd
+[language-server.clangd]
+command = "clangd-15"
+
+[language-server.rust-analyzer]
+# command = "rust-analyzer"
+check.command = "clippy"
