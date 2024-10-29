@@ -9,5 +9,9 @@ return {
       highlight = { enable = true },
       indent = { enable = true },
     })
-  end
+
+    vim.cmd([[
+  autocmd BufRead,BufNewFile *.html set filetype=javascript.jsx
+]])
+  end,
 }

@@ -1,5 +1,6 @@
 -- Load our options first
 require("config.options")
+vim.api.nvim_set_keymap('n', 'S', '<nop>', { noremap = true, silent = true })
 
 -- Bootstrapping LazyVim Package Manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

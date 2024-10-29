@@ -5,6 +5,9 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
+-- Rebind S in normal mode
+vim.api.nvim_set_keymap('n', 'S', '<nop>', { noremap = true, silent = true })
+
 -- Neotree Keymaps
 map('n', '<leader>e', ':Neotree filesystem reveal left<CR>', { desc = 'Fil[E] System Reveal' })
 
