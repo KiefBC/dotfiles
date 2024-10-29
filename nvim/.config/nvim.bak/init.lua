@@ -1,3 +1,7 @@
+-- Load our options first
+-- require("config.options")
+-- require("config.keymaps")
+
 --[[
 
 =====================================================================
