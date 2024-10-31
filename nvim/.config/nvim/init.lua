@@ -1,7 +1,5 @@
+require 'custom.core'
 require 'custom.lazy'
-require 'custom.options'
-require 'custom.keymaps'
-require 'custom.autocmd'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -546,7 +544,7 @@ require('lazy').setup({
     },
   },
 
-  require 'custom.keymaps',
+  -- require 'custom.keymaps',
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
