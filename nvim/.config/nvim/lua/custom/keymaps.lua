@@ -8,10 +8,18 @@ local keymap = vim.keymap -- Alias to make it easier to use
 -- <Esc><Esc> exits terminal mode
 
 -- These will help with splitting the windows
-keymap.set('n', '<leader>sv', ':vsplit<CR>', { desc = '[S]plit [V]ertically' })
-keymap.set('n', '<leader>sh', ':split<CR>', { desc = '[S]plit [H]orizontally' })
-keymap.set('n', '<leader>se', ':wincmd =<CR>', { desc = '[S]plit [E]qual' })
-keymap.set('n', '<leader>sx', '<cmd>close<CR>', { desc = '[S]plit [X] Close' })
+-- TODO: Potentially find a better way to do this
+keymap.set('n', '<leader>bsv', ':vsplit<CR>', { desc = 'Buffer [S]plit [V]ertically' })
+keymap.set('n', '<leader>bsh', ':split<CR>', { desc = 'Buffer [S]plit [H]orizontally' })
+keymap.set('n', '<leader>bse', ':wincmd =<CR>', { desc = 'Buffer [S]plit [E]qual' })
+keymap.set('n', '<leader>bsx', '<cmd>close<CR>', { desc = 'Buffer [S]plit [X] Close' })
+
+-- These will help with creating, deleting, and moving between buffers
+-- TODO: Add a new entry in Which Key
+keymap.set('n', '<leader>to', ':tabnew<CR>', { desc = '[T]ab [O]pen' })
+keymap.set('n', '<leader>tc', ':tabclose<CR>', { desc = '[T]ab [C]lose' })
+keymap.set('n', '<leader>tn', ':tabnext<CR>', { desc = '[T]ab [N]ext' })
+keymap.set('n', '<leader>tp', ':tabprevious<CR>', { desc = '[T]ab [P]revious' })
 
 -- This will show us the Directory Strcuture
 keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', { desc = 'Fil[E] Tree' })

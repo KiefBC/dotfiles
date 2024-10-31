@@ -1,3 +1,4 @@
+require 'custom.lazy'
 require 'custom.options'
 require 'custom.keymaps'
 require 'custom.autocmd'
@@ -13,6 +14,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 -- NOTE: Here is where you install your plugins.
+-- require('lazy').setup('plugins.location')
 require('lazy').setup({
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
