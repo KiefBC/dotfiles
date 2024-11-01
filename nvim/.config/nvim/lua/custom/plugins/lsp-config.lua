@@ -19,8 +19,9 @@ return {
       local lspconfig = require 'lspconfig'
       lspconfig.lua_ls.setup {}
       lspconfig.clangd.setup {
-        cmd = { 'clangd-15' },
+        cmd = { 'clangd' },
       }
+      lspconfig.pyright.setup {}
     end,
   },
 }
