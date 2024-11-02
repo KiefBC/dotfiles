@@ -64,37 +64,32 @@ install_lazygit() {
 
 # Function to install Neovim
 install_neovim() {
-    if ! command -v nvim &> /dev/null; then
-        echo "Installing Neovim..."
-        case $os in
-            ubuntu)
-                sudo apt-get update
-                sudo apt-get install -y neovim
-                ;;
-            fedora)
-                sudo dnf install -y neovim
-                ;;
-        esac
-    else
-        echo "Neovim is already installed."
-    fi
+    install_package "neovim"
 }
 
 # Function to install Helix
 install_helix() {
-    if ! command -v hx &> /dev/null; then
-        echo "Installing Helix..."
+    install_package "helix"
+}
+
+# Function to install WezTerm
+install_wezterm() {
+    if ! command -v wezterm &> /dev/null; then
+        echo "Installing WezTerm..."
         case $os in
             ubuntu)
-                sudo apt-get update
-                sudo apt-get install -y helix
+                wget https://github.com/wez/wezterm/releases/latest/download/wezterm-ubuntu-latest.deb
+                sudo apt install -y ./wezterm-ubuntu-latest.deb
+                rm wezterm-ubuntu-latest.deb
                 ;;
             fedora)
-                sudo dnf install -y helix
+                sudo dnf install -y dnf-plugins-core
+                sudo dnf copr enable atim/wezterm -y
+                sudo dnf install -y wezterm
                 ;;
         esac
     else
-        echo "Helix is already installed."
+        echo "WezTerm is already installed."
     fi
 }
 
@@ -118,10 +113,11 @@ stow_dotfiles() {
 
 # Main script execution
 detect_os
-install_package stow
+install_package "stow"   # Ensures GNU Stow is installed
 install_lazygit
 install_neovim
 install_helix
+install_wezterm
 remove_existing_dirs
 stow_dotfiles
 
