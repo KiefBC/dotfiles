@@ -64,7 +64,24 @@ install_lazygit() {
 
 # Function to install Neovim
 install_neovim() {
-    install_package "neovim"
+    if ! command -v nvim &> /dev/null; then
+        echo "Installing Neovim..."
+        case $os in
+            ubuntu)
+                if ! command -v snap &> /dev/null; then
+                    echo "Snap is not installed. Installing Snap..."
+                    sudo apt-get update
+                    sudo apt-get install -y snapd
+                fi
+                sudo snap install nvim --classic
+                ;;
+            fedora)
+                sudo dnf install -y neovim
+                ;;
+        esac
+    else
+        echo "Neovim is already installed."
+    fi
 }
 
 # Function to install Helix
@@ -78,9 +95,13 @@ install_wezterm() {
         echo "Installing WezTerm..."
         case $os in
             ubuntu)
-                wget https://github.com/wez/wezterm/releases/latest/download/wezterm-ubuntu-latest.deb
-                sudo apt install -y ./wezterm-ubuntu-latest.deb
-                rm wezterm-ubuntu-latest.deb
+                # Add the GPG key
+                curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/wezterm-archive-keyring.gpg
+                # Add the repository
+                echo "deb [signed-by=/usr/share/keyrings/wezterm-archive-keyring.gpg] https://apt.fury.io/wez/ stable main" | sudo tee /etc/apt/sources.list.d/wezterm.list
+                # Update and install WezTerm
+                sudo apt-get update
+                sudo apt-get install -y wezterm
                 ;;
             fedora)
                 sudo dnf install -y dnf-plugins-core
