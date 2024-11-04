@@ -10,3 +10,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+-- This will highlight inline JSX on HTML files
+vim.api.nvim_command [[
+  autocmd FileType html setlocal filetype=html.jsx
+]]
