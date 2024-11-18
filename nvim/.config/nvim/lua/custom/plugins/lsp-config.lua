@@ -15,6 +15,11 @@ return {
   },
   {
     'neovim/nvim-lspconfig',
+    dependencies = {
+      { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
+      { 'j-hui/fidget.nvim', {} },
+      { 'hrsh7th/cmp-nvim-lsp' },
+    },
     config = function()
       local lspconfig = require 'lspconfig'
       lspconfig.lua_ls.setup {}
