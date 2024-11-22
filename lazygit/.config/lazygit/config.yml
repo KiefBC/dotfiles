@@ -1,0 +1,14 @@
+# Display Nerdfonts in the GUI
+gui:
+  nerdFontsVersion: "3"
+  branchColors:
+    "docs": "#11aaff" # use a light blue for branches beginning with 'docs/'
+  authorColors:
+    # use red for John Smith
+    "KiefBC": "red"
+    # use blue for other authors
+    "*": "#0000ff"
+
+# Which preset to use for editing
+os:
+  editPreset: "nvim"
