@@ -5,7 +5,6 @@ return { -- Autocompletion
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
-    -- Snippet Engine & its associated nvim-cmp source
     {
       'L3MON4D3/LuaSnip',
       build = (function()
