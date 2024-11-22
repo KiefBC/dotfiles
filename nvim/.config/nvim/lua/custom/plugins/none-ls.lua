@@ -25,6 +25,10 @@ return {
         -- require 'none-ls.formatting.autopep8',
         -- Rust
         -- null_ls.builtins.formatting.rustfmt,
+        -- Shell/Bash
+        null_ls.builtins.formatting.shfmt, -- Formatter
+        null_ls.builtins.diagnostics.shellcheck, -- Linter
+        null_ls.builtins.code_actions.shellcheck, -- Code actions
       },
     }
   end,
