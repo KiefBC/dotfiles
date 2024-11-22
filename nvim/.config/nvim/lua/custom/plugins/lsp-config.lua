@@ -110,25 +110,27 @@ return {
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+      capabilities.offsetEncoding = { "utf-16" }
 
       lspconfig.lua_ls.setup {}
       lspconfig.clangd.setup {
-        cmd = { 'clangd',
-          '--clang-tidy', -- Enable clang-tidy
-          '--completion-style=detailed', -- Use detailed completion style
-          '--background-index', -- Enable background index
-          '--suggest-missing-includes', -- Suggest missing includes
-          '--header-insertion=iwyu', -- Use iwyu for header insertion
-          '--enable-config', -- Enable configuration
-          '--all-scopes-completion', -- Enable all scopes completion
-          '--header-insertion-decorators', -- Enable header insertion decorators
-          '--j=12', -- Set number of threads to 12
-        },
         capabilities = capabilities,
+        cmd = { 'clangd',
+          '--offset-encoding=utf-16',
+          '--clang-tidy',
+          '--completion-style=detailed',
+          '--background-index',
+          '--suggest-missing-includes',
+          '--header-insertion=iwyu',
+          '--enable-config',
+          '--all-scopes-completion',
+          '--header-insertion-decorators',
+          '--j=12',
+        },
         init_options = {
-          clangdFileStatus = true, -- Update file status on save
+          clangdFileStatus = true,
           clangTidy = {
-            checks = { '*' }, -- Enable all checks
+            checks = { '*' },
           },
         },
       }
