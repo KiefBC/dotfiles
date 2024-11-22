@@ -18,10 +18,11 @@ return {
         require 'none-ls.diagnostics.eslint',
         -- Python
         null_ls.builtins.formatting.black,
-        -- null_ls.builtins.formatting.ruff,
-        -- null_ls.builtins.diagnostics.ruff,
+        -- require 'none-ls.formatting.ruff',
+        -- require 'none-ls.diagnostics.ruff',
         -- require 'none-ls.diagnostics.flake8',
         -- null_ls.builtins.formatting.isort,
+        -- require 'none-ls.formatting.autopep8',
         -- Rust
         -- null_ls.builtins.formatting.rustfmt,
       },

@@ -9,8 +9,8 @@ return {
       indent = { enable = true },
     }
 
-    vim.cmd [[
-  autocmd BufRead,BufNewFile *.html set filetype=javascript.jsx
-]]
+--     vim.cmd [[
+--   autocmd BufRead,BufNewFile *.html set filetype=javascript.jsx
+-- ]]
   end,
 }
