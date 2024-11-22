@@ -6,6 +6,7 @@ return {
   config = function()
     local null_ls = require 'null-ls'
     null_ls.setup {
+      autostart = true,
       sources = {
         -- Lua
         null_ls.builtins.formatting.stylua,
@@ -16,8 +17,10 @@ return {
         -- null_ls.builtins.diagnostics.eslint_d,
         require 'none-ls.diagnostics.eslint',
         -- Python
-        -- null_ls.builtins.formatting.black,
-        require 'none-ls.diagnostics.flake8',
+        null_ls.builtins.formatting.black,
+        -- null_ls.builtins.formatting.ruff,
+        -- null_ls.builtins.diagnostics.ruff,
+        -- require 'none-ls.diagnostics.flake8',
         -- null_ls.builtins.formatting.isort,
         -- Rust
         -- null_ls.builtins.formatting.rustfmt,

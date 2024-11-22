@@ -132,7 +132,19 @@ return {
           },
         },
       }
-      lspconfig.pyright.setup {}
+      lspconfig.pyright.setup {
+        capabilities = capabilities,
+      }
+      lspconfig.ruff.setup {
+        capabilities = capabilities,
+        settings = {
+          python = {
+            analysis = {
+              typeCheckingMode = "basic",
+            }
+          }
+        },
+      }
     end,
   },
 }
