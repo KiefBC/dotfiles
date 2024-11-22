@@ -148,6 +148,9 @@ return {
           },
         },
       }
+      lspconfig.bashls.setup {
+        capabilities = capabilities,
+      }
     end,
   },
 }

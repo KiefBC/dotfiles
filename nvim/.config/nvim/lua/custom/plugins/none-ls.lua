@@ -2,9 +2,12 @@ return {
   'nvimtools/none-ls.nvim',
   dependencies = {
     'nvimtools/none-ls-extras.nvim',
+    'gbprod/none-ls-shellcheck.nvim',
   },
   config = function()
     local null_ls = require 'null-ls'
+    local shellcheck = require 'none-ls-shellcheck'
+
     null_ls.setup {
       autostart = true,
       sources = {
@@ -27,8 +30,8 @@ return {
         -- null_ls.builtins.formatting.rustfmt,
         -- Shell/Bash
         null_ls.builtins.formatting.shfmt, -- Formatter
-        null_ls.builtins.diagnostics.shellcheck, -- Linter
-        null_ls.builtins.code_actions.shellcheck, -- Code actions
+        shellcheck.diagnostics, -- Linter
+        shellcheck.code_actions, -- Code actions
       },
     }
   end,
