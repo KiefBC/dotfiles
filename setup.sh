@@ -31,22 +31,22 @@ detect_os() {
 # Function to install a package if not already installed
 install_package() {
 	local package=$1
-	if ! command -v $package &>/dev/null; then
+	if ! command -v "$package" &>/dev/null; then
 		echo "Installing $package..."
 		case $os in
 		ubuntu)
 			sudo apt-get update
-			sudo apt-get install -y $package
+			sudo apt-get install -y "$package"
 			;;
 		fedora)
-			sudo dnf install -y $package
+			sudo dnf install -y "$package"
 			;;
 		esac
 	else
 		echo "$package is already installed."
 	fi
 	# Check if the package was installed successfully
-	if ! command -v $package &>/dev/null; then
+	if ! command -v "$package" &>/dev/null; then
 		echo "Failed to install $package"
 		exit 1
 	fi
