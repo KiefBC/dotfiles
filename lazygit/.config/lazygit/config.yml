@@ -3,9 +3,11 @@ gui:
   nerdFontsVersion: "3"
   branchColors:
     "docs": "#11aaff" # use a light blue for branches beginning with 'docs/'
+    "plugin": "#ffd399" # use red for branches beginning with 'plugin/'
+    "main": "#00ff00" # use green for branches beginning with 'main/'
   authorColors:
     # use red for John Smith
-    "KiefBC": "red"
+    "Kiefer": "red"
     # use blue for other authors
     "*": "#0000ff"
 
