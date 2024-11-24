@@ -9,7 +9,23 @@ return {
     'williamboman/mason-lspconfig.nvim',
     config = function()
       require('mason-lspconfig').setup {
-        ensure_installed = { 'lua_ls', 'bashls' },
+        ensure_installed = {
+          'lua_ls',
+          'bashls',
+          'pyright',
+          'ruff',
+          'ts_ls',
+          'black',
+          'cpptools',
+          'isort',
+          'flake8',
+          'shellcheck',
+          'shellfmt',
+          'stylua',
+          'oxlint',
+          'pylint',
+          'prettierd',
+        },
       }
     end,
   },
@@ -108,6 +124,7 @@ return {
         end,
       })
 
+      ---@class lsp.ClientCapabilities
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
       capabilities.offsetEncoding = { 'utf-16' }
