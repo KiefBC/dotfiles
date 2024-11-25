@@ -48,8 +48,10 @@ return {
       { '<leader>w', group = '[W]orkspace' },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-      -- Leading Key
-      { '<leader>cc', group = '[C]ode [C]ompiling Options', mode = { 'n' } },
+      -- For our Code Compiler Plugin
+      { '<leader>cc', group = 'Code [C]ompiling Options', mode = { 'n' } },
+      -- For our Extra Keymaps
+      { '<leader>z', group = 'Extra Keymap[z]', mode = { 'n' } },
     },
   },
 }
