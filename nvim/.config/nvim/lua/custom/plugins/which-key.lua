@@ -48,16 +48,8 @@ return {
       { '<leader>w', group = '[W]orkspace' },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-      {
-        '<leader>cc',
-        group = '[C]ode [C]ompiling Options',
-        mode = { 'n' },
-      },
-
-      {
-        -- Code Compiler Plugin
-        { '<leader>cco', '<cmd>CompilerOpen<cr>', desc = 'Open [C]ompiler' },
-      },
+      -- Leading Key
+      { '<leader>cc', group = '[C]ode [C]ompiling Options', mode = { 'n' } },
     },
   },
 }
