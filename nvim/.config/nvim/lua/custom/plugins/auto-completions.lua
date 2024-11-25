@@ -2,7 +2,8 @@ return { -- Autocompletion
   {
     'github/copilot.vim',
   },
-  'hrsh7th/nvim-cmp',
+  {
+    'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
     {
@@ -20,27 +21,33 @@ return { -- Autocompletion
         -- `friendly-snippets` contains a variety of premade snippets.
         --    See the README about individual language/framework/plugin snippets:
         --    https://github.com/rafamadriz/friendly-snippets
-        -- {
-        --   'rafamadriz/friendly-snippets',
-        --   config = function()
-        --     require('luasnip.loaders.from_vscode').lazy_load()
-        --   end,
-        -- },
+        {
+          'rafamadriz/friendly-snippets',
+          config = function()
+            require('luasnip.loaders.from_vscode').lazy_load()
+          end,
+        },
+        'saadparwaiz1/cmp_luasnip',
       },
     },
     'saadparwaiz1/cmp_luasnip',
-
-    -- Adds other completion capabilities.
-    --  nvim-cmp does not ship with all sources by default. They are split
-    --  into multiple repos for maintenance purposes.
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
+    
   },
 
   config = function()
     -- See `:help cmp`
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
+    
+    -- Add these lines to enable more snippet features
+    require('luasnip').setup({
+      history = true,
+      update_events = 'TextChanged,TextChangedI',
+      enable_autosnippets = true,
+    })
+    
     luasnip.config.setup {}
 
     cmp.setup {
@@ -115,4 +122,5 @@ return { -- Autocompletion
       },
     }
   end,
+  }
 }
