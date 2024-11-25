@@ -1,4 +1,4 @@
-return {
+return { -- TODO: Add v3 Settings
   'folke/which-key.nvim',
   event = 'VimEnter', -- Sets the loading event to 'VimEnter'
   opts = {
@@ -48,10 +48,14 @@ return {
       { '<leader>w', group = '[W]orkspace' },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      { '<leader>l', group = '[L]azy Git' },
       -- For our Code Compiler Plugin
       { '<leader>cc', group = 'Code [C]ompiling Options', mode = { 'n' } },
       -- For our Extra Keymaps
-      { '<leader>z', group = 'Extra Keymap[z]', mode = { 'n' } },
+      { '<leader>z', group = 'Extra Keymap[Z]' },
     },
+
+    preset = 'modern',
+    notify = true,
   },
 }
