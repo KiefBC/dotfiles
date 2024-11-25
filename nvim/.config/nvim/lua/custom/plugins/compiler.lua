@@ -5,7 +5,7 @@ return {
     dependencies = { 'stevearc/overseer.nvim' },
     opts = {},
     keys = {
-      { '<leader>cco', '<cmd>CompilerOpen<cr>', desc = 'Open Compiler' },
+      -- { '<leader>cco', '<cmd>CompilerOpen<cr>', desc = 'Open Compiler' },
       {
         '<S-F3>',
         function()

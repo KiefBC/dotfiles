@@ -1,4 +1,4 @@
-return { -- Useful plugin to show you pending keybinds.
+return {
   'folke/which-key.nvim',
   event = 'VimEnter', -- Sets the loading event to 'VimEnter'
   opts = {
@@ -48,6 +48,16 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>w', group = '[W]orkspace' },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      {
+        '<leader>cc',
+        group = '[C]ode [C]ompiling Options',
+        mode = { 'n' },
+      },
+
+      {
+        -- Code Compiler Plugin
+        { '<leader>cco', '<cmd>CompilerOpen<cr>', desc = 'Open [C]ompiler' },
+      },
     },
   },
 }
