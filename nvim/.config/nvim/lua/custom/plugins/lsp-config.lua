@@ -140,15 +140,21 @@ return {
           },
         },
       }
-      lspconfig.pyright.setup {
-        capabilities = capabilities,
-      }
+      -- lspconfig.pyright.setup {
+      --   capabilities = capabilities,
+      -- }
       lspconfig.ruff.setup {
         capabilities = capabilities,
-        settings = {
-          python = {
-            analysis = {
-              typeCheckingMode = 'basic',
+        init_options = {
+          settings = {
+            lineLength = 120,
+            organizeImports = true,
+            showSyntaxErrors = true,
+            line = {
+              enable = true,
+            },
+            format = {
+              enable = true,
             },
           },
         },
