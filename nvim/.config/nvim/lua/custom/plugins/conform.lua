@@ -35,7 +35,6 @@ return { -- Autoformat
       -- Conform can also run multiple formatters sequentially
       -- python = { 'isort', 'black' },
       python = {
-        'ruff',
         -- To fix auto-fixable lint errors.
         'ruff_fix',
         -- To run the Ruff formatter.

@@ -15,12 +15,13 @@ return {
         null_ls.builtins.formatting.stylua,
         -- CPP
         null_ls.builtins.formatting.clang_format,
-        -- Javascript
-        null_ls.builtins.formatting.prettier,
+        -- Javascript / HTML / CSS
+        -- null_ls.builtins.formatting.prettierd,
         -- null_ls.builtins.diagnostics.eslint_d,
+        null_ls.builtins.formatting.rustywind,
         require 'none-ls.diagnostics.eslint',
         -- Python
-        -- null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.black,
         -- require 'none-ls.formatting.ruff',
         -- require 'none-ls.diagnostics.ruff',
         -- require 'none-ls.diagnostics.flake8',

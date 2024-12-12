@@ -1,8 +1,23 @@
 return {
   'folke/snacks.nvim',
+  keys = {
+    {
+      '<leader>.',
+      function()
+        Snacks.scratch()
+      end,
+      desc = 'Toggle Scratch Buffer',
+    },
+    {
+      '<leader>S',
+      function()
+        Snacks.scratch.select()
+      end,
+      desc = 'Select Scratch Buffer',
+    },
+  },
   priority = 1000,
   lazy = false,
-  ---@type Snacks.Config
   opts = {
     -- your configuration comes here
     -- or leave it empty to use the default settings
@@ -15,14 +30,9 @@ return {
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
-  },
-  keys = {
-    {
-      '<leader>n',
-      function()
-        Snacks.notifier.show_history()
-      end,
-      desc = 'Notification History',
-    },
+    input = { enabled = true },
+    toggleterm = { enabled = true },
+    scratch = { enabled = true },
+    dashboard = { enabled = true },
   },
 }
