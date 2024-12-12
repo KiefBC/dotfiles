@@ -11,11 +11,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- This will highlight inline JSX on HTML files
-vim.api.nvim_command [[
-  autocmd FileType html setlocal filetype=html.jsx
-]]
-
 -- This function will be executed to configure the current buffer
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
@@ -28,7 +23,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+vim.cmd 'set expandtab'
+vim.cmd 'set tabstop=2'
+vim.cmd 'set softtabstop=2'
+vim.cmd 'set shiftwidth=2'
+
