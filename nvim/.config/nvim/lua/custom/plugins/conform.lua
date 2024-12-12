@@ -1,6 +1,6 @@
 return { -- Autoformat
   'stevearc/conform.nvim',
-  event = { 'BufWritePre' },
+  event = { 'BufWritePre', 'BufNewFile' },
   cmd = { 'ConformInfo' },
   keys = {
     {
@@ -9,7 +9,19 @@ return { -- Autoformat
         require('conform').format { async = true, lsp_format = 'fallback' }
       end,
       mode = '',
-      desc = '[F]ormat buffer',
+      desc = '[F]ormat Buffer',
+    },
+    {
+      '<leader>f',
+      function()
+        require('conform').format {
+          lsp_fallback = true,
+          async = false,
+          timeout_ms = 500,
+        }
+      end,
+      mode = 'v',
+      desc = '[F]ormat selection',
     },
   },
   opts = {
@@ -42,6 +54,10 @@ return { -- Autoformat
         -- To organize the imports.
         'ruff_organize_imports',
       },
+      html = { 'prettierd' },
+      sh = { 'shfmt' },
+      json = { 'prettierd' },
+      svelte = { 'prettierd' },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
