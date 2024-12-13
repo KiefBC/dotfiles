@@ -7,6 +7,8 @@ return {
     },
   },
   config = function()
+    local telescope = require 'telescope'
+    local actions = require 'telescope.actions'
     require('todo-comments').setup {
       signs = true, -- show icons in the signs column
       keywords = {
