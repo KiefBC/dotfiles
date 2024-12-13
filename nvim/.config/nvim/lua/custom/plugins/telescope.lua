@@ -21,8 +21,11 @@ return { -- Fuzzy Finder (files, lsp, etc)
 
     -- Useful for getting pretty icons, but requires a Nerd Font.
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+    'folke/todo-comments.nvim',
   },
   config = function()
+    local todo_comments = require 'todo-comments'
+
     local keymap = vim.keymap -- Alias to make it easier to use
     -- Telescope is a fuzzy finder that comes with a lot of different things that
     -- it can fuzzy find! It's more than just a "file finder", it can search
@@ -122,6 +125,14 @@ return { -- Fuzzy Finder (files, lsp, etc)
     -- Execute a code action, usually your cursor needs to be on top of an error
     -- keymap.set('n', '<leader>ca', builtin.lsp_code_actions, { desc = '[C]ode [A]ction' })
 
+    keymap.set('n', ']t', function()
+      todo_comments.jump_next()
+    end, { desc = 'Jump to next todo' })
+
+    keymap.set('n', '[t', function()
+      todo_comments.jump_prev()
+    end, { desc = 'Jump to previous todo' })
+
     -- WARN: This is not Goto Definition, this is Goto Declaration
     -- For example, in C this would take you to the header
     -- keymap.set('n', 'gD', builtin.lsp_declarations, { desc = 'Go to [D]eclaration' })
@@ -133,5 +144,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
       end, { desc = '[T]oggle Inlay [H]ints' })
     end
+    todo_comments.setup()
   end,
 }
