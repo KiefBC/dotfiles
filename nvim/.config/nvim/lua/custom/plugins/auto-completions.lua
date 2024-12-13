@@ -35,6 +35,7 @@ return { -- Autocompletion
       'hrsh7th/cmp-path',
       'Zeioth/NormalSnippets',
       'benfowler/telescope-luasnip.nvim',
+      'hrsh7th/cmp-buffer',
     },
 
     config = function()
