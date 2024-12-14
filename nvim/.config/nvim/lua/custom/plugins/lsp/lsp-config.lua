@@ -2,11 +2,11 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
+      -- { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
       { 'j-hui/fidget.nvim', {} },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'antosha417/nvim-lsp-file-operations', config = true },
-      { 'folke/neodev.nvim', opts = {} },
+      -- { 'folke/neodev.nvim', opts = {} },
     },
     config = function()
       local lspconfig = require 'lspconfig'
@@ -15,6 +15,7 @@ return {
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)
+          -- Simply put, this is an easier way to create keymaps. Self-explanatory.
           local map = function(keys, func, desc, mode)
             mode = mode or 'n'
             vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
@@ -60,7 +61,6 @@ return {
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
           --    See `:help CursorHold` for information about when this is executed
-          --
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
           local client = vim.lsp.get_client_by_id(event.data.client_id)
           if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
@@ -88,7 +88,6 @@ return {
 
           -- The following code creates a keymap to toggle inlay hints in your
           -- code, if the language server you are using supports them
-          --
           -- This may be unwanted, since they displace some of your code
           if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
             map('<leader>th', function()
@@ -104,9 +103,28 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
       capabilities.offsetEncoding = { 'utf-16' }
 
-      lspconfig.lua_ls.setup {
-        capabilities = capabilities,
+      -- Default handlers for LSP servers
+      mason_lspconfig.setup_handlers {
+        function(server_name)
+          lspconfig[server_name].setup {
+            capabilities = capabilities,
+          }
+        end,
+        lspconfig['lua_ls'].setup {
+          capabilities = capabilities,
+          settings = {
+            Lua = {
+              diagnostics = {
+                globals = { 'vim' },
+              },
+            },
+          },
+        },
       }
+
+      -- lspconfig.lua_ls.setup {
+      --   capabilities = capabilities,
+      -- }
       lspconfig.clangd.setup {
         capabilities = capabilities,
         cmd = {

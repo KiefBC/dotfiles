@@ -7,7 +7,7 @@ return {
   config = function()
     local config = require 'mason'
     local mason_lspconfig = require 'mason-lspconfig'
-    local mason_tool_installer = require 'mason-tool-installer'
+    
     config.setup {}
     mason_lspconfig.setup {
       ensure_installed = {
@@ -21,6 +21,9 @@ return {
         'emmet_ls',
       },
     }
+
+    local mason_tool_installer = require 'mason-tool-installer'
+
     mason_tool_installer.setup {
       ensure_installed = {
         'stylua',
