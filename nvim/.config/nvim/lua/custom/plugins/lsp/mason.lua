@@ -38,6 +38,7 @@ return {
           'shfmt',
           'pylint',
           'eslint_d',
+          'codelldb',
         },
       }
     end,
