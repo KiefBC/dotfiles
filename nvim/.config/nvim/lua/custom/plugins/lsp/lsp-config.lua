@@ -127,19 +127,6 @@ return {
       -- }
       lspconfig.clangd.setup {
         capabilities = capabilities,
-        cmd = {
-          'clangd',
-          '--offset-encoding=utf-16',
-          '--clang-tidy',
-          '--completion-style=detailed',
-          '--background-index',
-          '--suggest-missing-includes',
-          '--header-insertion=iwyu',
-          '--enable-config',
-          '--all-scopes-completion',
-          '--header-insertion-decorators',
-          '--j=12',
-        },
         init_options = {
           clangdFileStatus = true,
           clangTidy = {
