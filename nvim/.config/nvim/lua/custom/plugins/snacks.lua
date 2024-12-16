@@ -6,14 +6,35 @@ return {
       function()
         Snacks.scratch()
       end,
-      desc = 'Toggle Scratch Buffer',
+      desc = 'Toggle [S]cratch Buffer',
     },
     {
       '<leader>S',
       function()
         Snacks.scratch.select()
       end,
-      desc = 'Select Scratch Buffer',
+      desc = 'Select [S]cratch Buffer',
+    },
+    {
+      '<leader>lg',
+      function()
+        Snacks.lazygit()
+      end,
+      desc = 'Lazy [G]it',
+    },
+    {
+      '<leader>n',
+      function()
+        Snacks.notifier.show_history()
+      end,
+      desc = '[N]otification History',
+    },
+    {
+      '<leader>un',
+      function()
+        Snacks.notifier.hide()
+      end,
+      desc = 'Dismiss All Notifications',
     },
   },
   priority = 1000,
@@ -34,5 +55,8 @@ return {
     toggleterm = { enabled = true },
     scratch = { enabled = true },
     dashboard = { enabled = true },
+    lazygit = { enabled = true },
+    debug = { enabled = true },
+    win = { enabled = true },
   },
 }
