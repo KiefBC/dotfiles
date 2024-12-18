@@ -1,17 +1,19 @@
 return {
   {
     'neovim/nvim-lspconfig',
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       -- { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
       { 'j-hui/fidget.nvim', {} },
-      { 'hrsh7th/cmp-nvim-lsp' },
+      -- { 'hrsh7th/cmp-nvim-lsp' },
       { 'antosha417/nvim-lsp-file-operations', config = true },
       -- { 'folke/neodev.nvim', opts = {} },
+      { 'saghen/blink.cmp' },
     },
     config = function()
       local lspconfig = require 'lspconfig'
       local mason_lspconfig = require 'mason-lspconfig'
-      local cmp_nvim_lsp = require 'cmp_nvim_lsp'
+      -- local cmp_nvim_lsp = require 'cmp_nvim_lsp'
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)
@@ -100,7 +102,7 @@ return {
       ---@class lsp.ClientCapabilities
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities.textDocument.completion.completionItem.snippetSupport = true
-      capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+      capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
       capabilities.offsetEncoding = { 'utf-16' }
 
       -- Default handlers for LSP servers
