@@ -9,6 +9,6 @@ return {
 
     local keymaps = vim.keymap
     keymaps.set('n', '<leader>wr', '<cmd>SessionRestore<CR>', { desc = '[R]estore Session' })
-    keymaps.set('n', '<leader>ws', '<cmd>SessionSave<CR>', { desc = '[S]ave Session' })
+    keymaps.set('n', '<leader>wt', '<cmd>SessionSave<CR>', { desc = '[S]ave Session' })
   end,
 }

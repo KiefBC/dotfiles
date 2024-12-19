@@ -48,10 +48,12 @@ return { -- Autoformat
       -- Conform can also run multiple formatters sequentially
       -- python = { 'isort', 'black' },
       python = {
+        -- 'ruff_format',
         -- To fix auto-fixable lint errors.
-        'ruff_fix',
+        -- 'ruff_fix',
         -- To run the Ruff formatter.
         'ruff_format',
+        'ruff_check',
         -- To organize the imports.
         'ruff_organize_imports',
       },
