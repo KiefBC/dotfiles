@@ -122,48 +122,73 @@ return {
             },
           },
         },
+        lspconfig['ruff'].setup {
+          capabilities = capabilities,
+          init_options = {
+            settings = {
+              -- TODO: Add ruff settings
+              -- configuration = "/path/to/ruff.toml",
+
+              -- Line length for formatting
+              lineLength = 200,
+              -- Organize imports on save
+              organizeImports = true,
+              -- Show syntax errors
+              showSyntaxErrors = true,
+              -- Log level
+              logLevel = 'info',
+              fixAll = true,
+              codeAction = {
+                lint = {
+                  enable = true,
+                  preview = true,
+                },
+              },
+            },
+          },
+        },
       }
 
       -- lspconfig.lua_ls.setup {
       --   capabilities = capabilities,
       -- }
-      lspconfig.clangd.setup {
-        capabilities = capabilities,
-        init_options = {
-          clangdFileStatus = true,
-          clangTidy = {
-            checks = { '*' },
-          },
-        },
-      }
-      -- lspconfig.pyright.setup {
+      -- lspconfig.clangd.setup {
+      --   capabilities = capabilities,
+      --   init_options = {
+      --     clangdFileStatus = true,
+      --     clangTidy = {
+      --       checks = { '*' },
+      --     },
+      --   },
+      -- }
+      -- -- lspconfig.pyright.setup {
+      -- --   capabilities = capabilities,
+      -- -- }
+      -- lspconfig.ruff.setup {
+      --   capabilities = capabilities,
+      --   init_options = {
+      --     settings = {
+      --       lineLength = 120,
+      --       organizeImports = true,
+      --       showSyntaxErrors = true,
+      --       line = {
+      --         enable = true,
+      --       },
+      --       format = {
+      --         enable = true,
+      --       },
+      --     },
+      --   },
+      -- }
+      -- lspconfig.bashls.setup {
       --   capabilities = capabilities,
       -- }
-      lspconfig.ruff.setup {
-        capabilities = capabilities,
-        init_options = {
-          settings = {
-            lineLength = 120,
-            organizeImports = true,
-            showSyntaxErrors = true,
-            line = {
-              enable = true,
-            },
-            format = {
-              enable = true,
-            },
-          },
-        },
-      }
-      lspconfig.bashls.setup {
-        capabilities = capabilities,
-      }
-      lspconfig.ts_ls.setup {
-        capabilities = capabilities,
-      }
-      lspconfig.html.setup {
-        capabilities = capabilities,
-      }
+      -- lspconfig.ts_ls.setup {
+      --   capabilities = capabilities,
+      -- }
+      -- lspconfig.html.setup {
+      --   capabilities = capabilities,
+      -- }
     end,
   },
 }
