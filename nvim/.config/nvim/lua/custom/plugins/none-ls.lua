@@ -19,7 +19,7 @@ return {
         -- null_ls.builtins.formatting.prettierd,
         -- null_ls.builtins.diagnostics.eslint_d,
         null_ls.builtins.formatting.rustywind,
-        require 'none-ls.diagnostics.eslint',
+        require 'none-ls.diagnostics.eslint_d',
         -- Python
         -- null_ls.builtins.formatting.black,
         -- require 'none-ls.formatting.ruff',
