@@ -122,6 +122,12 @@ return {
             },
           },
         },
+        lspconfig['clangd'].setup {
+          capabilities = capabilities,
+          settings = {
+            cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose', '--completion-style=detailed' },
+          },
+        },
         lspconfig['ruff'].setup {
           capabilities = capabilities,
           init_options = {
