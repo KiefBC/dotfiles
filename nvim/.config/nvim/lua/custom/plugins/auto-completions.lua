@@ -62,7 +62,7 @@ return { -- Autocompletion
         sources = {
           default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot', 'luasnip', 'lazydev' },
           providers = {
-            lsp = { fallback_for = { 'lazydev' } },
+            lsp = { fallbacks = { 'lazydev' } },
             lazydev = {
               name = 'LazyDev',
               module = 'lazydev.integrations.blink',
