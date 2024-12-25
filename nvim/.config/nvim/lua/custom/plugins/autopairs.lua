@@ -1,7 +1,6 @@
--- autopairs
--- https://github.com/windwp/nvim-autopairs
-
 return {
+  -- INFO: It does what it says...
+  -- https://github.com/windwp/nvim-autopairs
   'windwp/nvim-autopairs',
   event = 'InsertEnter',
   -- Optional dependency

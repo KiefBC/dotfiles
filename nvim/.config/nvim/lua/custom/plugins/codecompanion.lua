@@ -1,4 +1,6 @@
 return {
+  -- TODO: Finish this install
+  --
   -- 'olimorris/codecompanion.nvim',
   -- dependencies = {
   --   'nvim-lua/plenary.nvim',

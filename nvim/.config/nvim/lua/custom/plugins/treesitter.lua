@@ -12,13 +12,16 @@ return {
       diagnostics = {
         disable = { 'missing-fields' },
       },
-      ensure_installed = { 'rust', 'svelte', 'javascript', 'html', 'css', 'bash', 'lua', 'tsx', 'typescript', 'json', 'tsx' },
+      ensure_installed = { 'rust', 'svelte', 'javascript', 'html', 'css', 'bash', 'lua', 'tsx', 'typescript', 'json', 'tsx', 'cpp' },
       auto_install = true,
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = true,
       },
-      indent = { enable = true, disable = { 'python' } },
+      indent = {
+        enable = true,
+        disable = { 'python', 'cpp' }, -- INFO: Let my LSP's handle it.
+      },
       autotag = { enable = true },
       incremental_selection = {
         enable = true,

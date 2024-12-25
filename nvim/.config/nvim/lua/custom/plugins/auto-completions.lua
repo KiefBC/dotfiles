@@ -1,7 +1,11 @@
-return { -- Autocompletion
+return {
   {
+    -- INFO: Copilot for nvim
+    -- https://github.com/zbirenbaum/copilot.lua
     'zbirenbaum/copilot.lua',
     dependencies = {
+      -- INFO: Adds copilot suggestions to blink.cmp
+      -- https://github.com/giuxtaposition/blink-cmp-copilot
       'giuxtaposition/blink-cmp-copilot',
     },
     cmd = 'Copilot',
@@ -15,13 +19,23 @@ return { -- Autocompletion
   },
   {
     {
+      -- INFO: https://github.com/Saghen/blink.cmp
+      -- https://cmp.saghen.dev/ - documentation
       'saghen/blink.cmp',
-      lazy = false, -- lazy loading handled internally
+      lazy = false,
       dependencies = {
-        { 'rafamadriz/friendly-snippets' },
+        {
+          'rafamadriz/friendly-snippets',
+          config = function()
+            require('luasnip.loaders.from_vscode').lazy_load()
+          end,
+        },
         { 'L3MON4D3/LuaSnip', version = 'v2.*' },
+        { 'Zeioth/NormalSnippets' },
+        { 'benfowler/telescope-luasnip.nvim' },
+        { 'giuxtaposition/blink-cmp-copilot' },
       },
-      version = 'v0.*',
+      version = '*',
 
       ---@module 'blink.cmp'
       ---@type blink.cmp.Config
@@ -29,12 +43,18 @@ return { -- Autocompletion
         completion = {
           documentation = {
             auto_show = true,
+            window = { border = 'single' },
           },
           menu = {
+            border = 'single',
             draw = {
               columns = { { 'label', 'label_description', gap = 1 }, { 'kind_icon', 'kind' } },
             },
           },
+        },
+        signature = {
+          enabled = true,
+          window = { border = 'single' },
         },
         snippets = {
           expand = function(snippet)
@@ -50,10 +70,7 @@ return { -- Autocompletion
             require('luasnip').jump(direction)
           end,
         },
-        -- 'default' for mappings similar to built-in completion
-        -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
-        -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
-        keymap = { preset = 'default' },
+        keymap = { preset = 'super-tab' },
         appearance = {
           use_nvim_cmp_as_default = true,
           nerd_font_variant = 'mono',
@@ -72,13 +89,56 @@ return { -- Autocompletion
               module = 'blink-cmp-copilot',
               score_offset = 100,
               async = true,
+              transform_items = function(_, items)
+                local CompletionItemKind = require('blink.cmp.types').CompletionItemKind
+                local kind_idx = #CompletionItemKind + 1
+                CompletionItemKind[kind_idx] = 'Copilot'
+                for _, item in ipairs(items) do
+                  item.kind = kind_idx
+                end
+                return items
+              end,
             },
           },
         },
-
-        -- signature = { enabled = true }
       },
       opts_extend = { 'sources.default' },
+      appearance = {
+        -- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot
+        kind_icons = {
+          Copilot = '',
+          Text = '󰉿',
+          Method = '󰊕',
+          Function = '󰊕',
+          Constructor = '󰒓',
+
+          Field = '󰜢',
+          Variable = '󰆦',
+          Property = '󰖷',
+
+          Class = '󱡠',
+          Interface = '󱡠',
+          Struct = '󱡠',
+          Module = '󰅩',
+
+          Unit = '󰪚',
+          Value = '󰦨',
+          Enum = '󰦨',
+          EnumMember = '󰦨',
+
+          Keyword = '󰻾',
+          Constant = '󰏿',
+
+          Snippet = '󱄽',
+          Color = '󰏘',
+          File = '󰈔',
+          Reference = '󰬲',
+          Folder = '󰉋',
+          Event = '󱐋',
+          Operator = '󰪚',
+          TypeParameter = '󰬛',
+        },
+      },
     },
   },
   -- {

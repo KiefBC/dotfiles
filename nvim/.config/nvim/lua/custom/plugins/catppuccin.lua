@@ -1,4 +1,6 @@
 return {
+  -- INFO: My favorite theme
+  -- https://github.com/catppuccin/nvim
   'catppuccin/nvim',
   name = 'catppuccin',
   config = function()
