@@ -99,6 +99,11 @@ return {
                 return items
               end,
             },
+            codecompanion = {
+              name = 'CodeCompanion',
+              module = 'codecompanion.providers.completion.blink',
+              enabled = true,
+            },
           },
         },
       },
