@@ -112,6 +112,10 @@ return {
             capabilities = capabilities,
           }
         end,
+        lspconfig['sourcekit'].setup {
+          capabilities = capabilities,
+          cmd = { 'sourcekit-lsp' },
+        },
         lspconfig['lua_ls'].setup {
           capabilities = capabilities,
           settings = {

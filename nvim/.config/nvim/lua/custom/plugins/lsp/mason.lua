@@ -21,6 +21,7 @@ return {
           'html',
           'cssls',
           'emmet_ls',
+          'swift_mesonls',
         },
       }
     end,

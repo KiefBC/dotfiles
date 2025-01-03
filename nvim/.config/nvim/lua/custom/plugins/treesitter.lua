@@ -5,6 +5,7 @@ return {
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
     'windwp/nvim-ts-autotag',
+    'ChimeHQ/Neon',
   },
   config = function()
     local configs = require 'nvim-treesitter.configs'
