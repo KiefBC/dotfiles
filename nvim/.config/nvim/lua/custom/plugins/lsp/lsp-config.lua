@@ -115,6 +115,10 @@ return {
         lspconfig['sourcekit'].setup {
           capabilities = capabilities,
           cmd = { 'sourcekit-lsp' },
+          root_dir = function(fname)
+            local root_files = { 'Package.swift', '.git' }
+            return vim.fs.find(root_files, { upward = true, path = vim.fs.dirname(fname) })[1] or vim.fs.dirname(fname)
+          end,
         },
         lspconfig['lua_ls'].setup {
           capabilities = capabilities,

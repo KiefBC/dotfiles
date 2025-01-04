@@ -6,14 +6,16 @@ return {
     'nvim-treesitter/nvim-treesitter-textobjects',
     'windwp/nvim-ts-autotag',
     'ChimeHQ/Neon',
+    -- 'ChimeHQ/SwiftTreeSitter',
   },
   config = function()
     local configs = require 'nvim-treesitter.configs'
+
     configs.setup {
       diagnostics = {
         disable = { 'missing-fields' },
       },
-      ensure_installed = { 'rust', 'svelte', 'javascript', 'html', 'css', 'bash', 'lua', 'tsx', 'typescript', 'json', 'tsx', 'cpp' },
+      ensure_installed = { 'rust', 'svelte', 'javascript', 'html', 'css', 'bash', 'lua', 'tsx', 'typescript', 'json', 'tsx', 'cpp', 'swift' },
       auto_install = true,
       highlight = {
         enable = true,
@@ -21,7 +23,7 @@ return {
       },
       indent = {
         enable = true,
-        disable = { 'python', 'cpp' }, -- INFO: Let my LSP's handle it.
+        disable = { 'python', 'cpp', 'swift' }, -- INFO: Let my LSP's handle it.
       },
       autotag = { enable = true },
       incremental_selection = {
