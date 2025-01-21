@@ -29,4 +29,14 @@ config.keys = {
 	{ key = "w", mods = "CTRL|SHIFT", action = act.CloseCurrentTab({ confirm = true }) },
 }
 
+-- Retrieve the default WSL domains
+local wsl_domains = wezterm.default_wsl_domains()
+
+-- Set the WSL domains
+config.wsl_domains = wsl_domains
+
+-- Set the default domain to your preferred WSL distribution
+-- Replace 'WSL:Ubuntu' with the actual name of your distribution
+config.default_domain = "WSL:Ubuntu"
+
 return config
