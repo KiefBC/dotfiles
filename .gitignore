@@ -1,3 +1,4 @@
 # Ignore Helix embedded repositories
 helix/.config/helix/runtime/grammars/sources/
 
+nvim/.config/github-copilot/apps.json
