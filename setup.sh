@@ -1,5 +1,8 @@
 #!/bin/bash
 
+### THIS IS OUT OF DATE AND NOT BEING MAINTAINED
+### THIS WILL BE UPDATED TO THE NEW DOTFILES
+
 # Make sure the script is not run as root/sudo
 if [ "$(id -u)" -eq 0 ]; then
 	echo "Please don't run this script as root/sudo directly"
