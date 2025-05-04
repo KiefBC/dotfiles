@@ -1,4 +1,4 @@
-Private property of Exodus: 79971@LazerEGG.local
+Private property of Exodus: 20110@LazerEGG.local
 
 jetbrains.exodus.io.LockingManager.lock(LockingManager.kt:88)
 jetbrains.exodus.io.LockingManager.lock(LockingManager.kt:39)
@@ -22,9 +22,9 @@ com.github.copilot.chat.session.persistence.ChatSessionPersistenceServiceKt.Chat
 com.github.copilot.chat.session.persistence.ChatSessionPersistenceServiceKt.chatSessionsPersistenceService(ChatSessionPersistenceService.kt:58)
 com.github.copilot.chat.session.ChatSessionManager.<init>(ChatSessionManager.kt:56)
 com.github.copilot.chat.session.ChatSessionManager.<init>(ChatSessionManager.kt:34)
-com.github.copilot.chat.window.CopilotChatToolWindow.onCopilotReady(CopilotChatToolWindow.kt:222)
-com.github.copilot.chat.window.CopilotChatToolWindow.access$onCopilotReady(CopilotChatToolWindow.kt:51)
-com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invokeSuspend(CopilotChatToolWindow.kt:206)
+com.github.copilot.chat.window.CopilotChatToolWindow.onCopilotReady(CopilotChatToolWindow.kt:234)
+com.github.copilot.chat.window.CopilotChatToolWindow.access$onCopilotReady(CopilotChatToolWindow.kt:52)
+com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invokeSuspend(CopilotChatToolWindow.kt:218)
 com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invoke(CopilotChatToolWindow.kt)
 com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invoke(CopilotChatToolWindow.kt)
 com.github.copilot.chat.precondition.PreconditionsService$refreshPreconditions$1.invokeSuspend(ChatPreconditionsService.kt:71)

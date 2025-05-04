@@ -1,4 +1,4 @@
-Private property of Exodus: 83479@LazerEGG.local
+Private property of Exodus: 3369@LazerEGG.local
 
 jetbrains.exodus.io.LockingManager.lock(LockingManager.kt:88)
 jetbrains.exodus.io.LockingManager.lock(LockingManager.kt:39)
@@ -23,11 +23,11 @@ com.github.copilot.chat.session.persistence.ChatSessionPersistenceServiceKt.chat
 com.github.copilot.chat.session.ChatSessionManager.<init>(ChatSessionManager.kt:56)
 com.github.copilot.chat.session.ChatSessionManager.<init>(ChatSessionManager.kt:34)
 com.github.copilot.chat.window.CopilotChatToolWindow.onCopilotReady(CopilotChatToolWindow.kt:222)
-com.github.copilot.chat.window.CopilotChatToolWindow.access$onCopilotReady(CopilotChatToolWindow.kt:51)
+com.github.copilot.chat.window.CopilotChatToolWindow.access$onCopilotReady(CopilotChatToolWindow.kt:50)
 com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invokeSuspend(CopilotChatToolWindow.kt:206)
 com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invoke(CopilotChatToolWindow.kt)
 com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invoke(CopilotChatToolWindow.kt)
-com.github.copilot.chat.precondition.PreconditionsService$refreshPreconditions$1.invokeSuspend(ChatPreconditionsService.kt:71)
+com.github.copilot.chat.precondition.PreconditionsService$refreshPreconditions$1.invokeSuspend(ChatPreconditionsService.kt:80)
 kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
 kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:29)
 kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:99)

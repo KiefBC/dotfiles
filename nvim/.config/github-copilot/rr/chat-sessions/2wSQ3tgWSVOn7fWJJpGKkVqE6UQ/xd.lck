@@ -1,4 +1,4 @@
-Private property of Exodus: 14344@LazerEGG.local
+Private property of Exodus: 19609@LazerEGG.local
 
 jetbrains.exodus.io.LockingManager.lock(LockingManager.kt:88)
 jetbrains.exodus.io.LockingManager.lock(LockingManager.kt:39)
@@ -20,11 +20,11 @@ com.github.copilot.chat.session.persistence.xodus.XdChatSessionPersistenceServic
 com.github.copilot.chat.session.persistence.xodus.XdChatSessionPersistenceService.<init>(XdChatSessionPersistenceService.kt:18)
 com.github.copilot.chat.session.persistence.ChatSessionPersistenceServiceKt.ChatSessionPersistenceService(ChatSessionPersistenceService.kt:48)
 com.github.copilot.chat.session.persistence.ChatSessionPersistenceServiceKt.chatSessionsPersistenceService(ChatSessionPersistenceService.kt:58)
-com.github.copilot.chat.session.ChatSessionManager.<init>(ChatSessionManager.kt:56)
-com.github.copilot.chat.session.ChatSessionManager.<init>(ChatSessionManager.kt:34)
-com.github.copilot.chat.window.CopilotChatToolWindow.onCopilotReady(CopilotChatToolWindow.kt:222)
-com.github.copilot.chat.window.CopilotChatToolWindow.access$onCopilotReady(CopilotChatToolWindow.kt:50)
-com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invokeSuspend(CopilotChatToolWindow.kt:206)
+com.github.copilot.chat.session.ChatSessionManager.<init>(ChatSessionManager.kt:60)
+com.github.copilot.chat.session.ChatSessionManager.<init>(ChatSessionManager.kt:38)
+com.github.copilot.chat.window.CopilotChatToolWindow.onCopilotReady(CopilotChatToolWindow.kt:268)
+com.github.copilot.chat.window.CopilotChatToolWindow.access$onCopilotReady(CopilotChatToolWindow.kt:63)
+com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invokeSuspend(CopilotChatToolWindow.kt:252)
 com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invoke(CopilotChatToolWindow.kt)
 com.github.copilot.chat.window.CopilotChatToolWindow$subscribeToAuthStatus$1$1.invoke(CopilotChatToolWindow.kt)
 com.github.copilot.chat.precondition.PreconditionsService$refreshPreconditions$1.invokeSuspend(ChatPreconditionsService.kt:80)
