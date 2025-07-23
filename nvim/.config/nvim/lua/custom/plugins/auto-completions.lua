@@ -2,6 +2,7 @@ return {
   {
     -- INFO: Copilot for nvim
     -- https://github.com/zbirenbaum/copilot.lua
+    -- TODO: Work on adding this to Blink CMP
     'zbirenbaum/copilot.lua',
     dependencies = {
       -- INFO: Adds copilot suggestions to blink.cmp
