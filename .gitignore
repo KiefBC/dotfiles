@@ -2,3 +2,5 @@
 helix/.config/helix/runtime/grammars/sources/
 
 nvim/.config/github-copilot/apps.json
+
+**/.DS_Store
