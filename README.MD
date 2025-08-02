@@ -9,7 +9,6 @@ This repository contains my personal dotfiles organized with GNU Stow for easy d
 ## Tools Configured
 
 - **[Neovim](nvim/)** - Primary editor with extensive plugin ecosystem (Kickstart-based)
-- **[NvChad](nvchad/)** - Alternative Neovim configuration using NvChad framework
 - **[Helix](helix/)** - Modern modal editor with built-in features
 - **[WezTerm](wezterm/)** - GPU-accelerated terminal emulator
 - **[LazyGit](lazygit/)** - Terminal UI for Git

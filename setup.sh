@@ -92,7 +92,7 @@ backup_configs() {
     local backup_dir="$HOME/.config_backup_$(date +%Y%m%d_%H%M%S)"
     local made_backup=false
     
-    for dir in nvim nvchad helix wezterm lazygit; do
+    for dir in nvim helix wezterm lazygit; do
         if [ -d "$HOME/.config/$dir" ]; then
             if [ "$made_backup" = false ]; then
                 print_status "Creating backup of existing configurations at $backup_dir"
@@ -114,7 +114,7 @@ deploy_dotfiles() {
     cd "$SCRIPT_DIR"
     
     # Deploy each configuration
-    for dir in nvim nvchad helix wezterm lazygit; do
+    for dir in nvim helix wezterm lazygit; do
         if [ -d "$dir" ]; then
             print_status "Deploying $dir configuration..."
             stow -v "$dir"
