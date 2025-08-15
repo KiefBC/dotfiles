@@ -1,3 +1,3 @@
-require 'custom.core'
-require 'custom.lazy'
+require 'core'
+require 'lazy-config'
 
