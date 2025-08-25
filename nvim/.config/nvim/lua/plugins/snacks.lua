@@ -17,7 +17,12 @@ return {
     input = {},
     term = { enabled = true },
     scratch = { enabled = true },
-    dashboard = { enabled = true },
+    dashboard = {
+      enabled = true,
+      preset = {
+        header = "██╗  ██╗██╗███████╗███████╗██╗  ██╗\n██║ ██╔╝██║██╔════╝██╔════╝╚██╗██╔╝\n█████╔╝ ██║█████╗  █████╗   ╚███╔╝ \n██╔═██╗ ██║██╔══╝  ██╔══╝   ██╔██╗ \n██║  ██╗██║███████╗██║     ██╔╝ ██╗\n╚═╝  ╚═╝╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝",
+      },
+    },
     lazygit = { enabled = true },
     debug = { enabled = true },
     win = { enabled = true },
