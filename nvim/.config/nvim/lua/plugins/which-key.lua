@@ -47,12 +47,14 @@ return { -- TODO: Add v3 Settings
       { '<leader>s', group = '[S]earch' },
       { '<leader>w', group = '[W]orkspace' },
       { '<leader>t', group = '[T]oggle' },
-      { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-      { '<leader>l', group = '[L]azy Git' },
-      -- For our Code Compiler Plugin
-      { '<leader>cc', group = 'Code [C]ompiling Options', mode = { 'n' } },
-      -- For our Extra Keymaps
-      { '<leader>z', group = 'Extra Keymap[Z]' },
+      { '<leader>h', group = '[H]unk', mode = { 'n', 'v' } },
+      { '<leader>b', group = '[B]uffer' },
+      { '<leader>bs', group = '[B]uffer [S]plit' },
+      { '<leader>x', group = 'E[x]tra Diagnostics' },
+      { '<leader>u', group = '[U]ndo/UI' },
+      { '<leader>cc', group = '[C]ode [C]ompiler', mode = { 'n' } },
+      { '<leader>l', group = '[L]azy' },
+      { '<leader>z', group = 'E[z]tra Keymaps' },
     },
 
     preset = 'modern',

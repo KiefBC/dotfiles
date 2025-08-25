@@ -12,10 +12,10 @@ local keymap = vim.keymap -- Alias to make it easier to use
 -- <Esc><Esc> exits terminal mode
 
 -- Window management
-keymap.set('n', '<leader>bsv', ':vsplit<CR>', { desc = 'Buffer [S]plit [V]ertically' })
-keymap.set('n', '<leader>bsh', ':split<CR>', { desc = 'Buffer [S]plit [H]orizontally' })
-keymap.set('n', '<leader>bse', ':wincmd =<CR>', { desc = 'Buffer [S]plit [E]qual' })
-keymap.set('n', '<leader>bsx', '<cmd>close<CR>', { desc = 'Buffer [S]plit [X] Close' })
+keymap.set('n', '<leader>bsv', ':vsplit<CR>', { desc = '[B]uffer [S]plit [V]ertically' })
+keymap.set('n', '<leader>bsh', ':split<CR>', { desc = '[B]uffer [S]plit [H]orizontally' })
+keymap.set('n', '<leader>bse', ':wincmd =<CR>', { desc = '[B]uffer [S]plit [E]qual' })
+keymap.set('n', '<leader>bsx', '<cmd>close<CR>', { desc = '[B]uffer [S]plit E[x]it' })
 
 -- Tab management
 keymap.set('n', '<leader>to', ':tabnew<CR>', { desc = '[T]ab [O]pen' })
@@ -61,7 +61,7 @@ keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window'
 -- ===================================================================
 
 keymap.set('n', '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal', silent = true })
-keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', { desc = 'Fil[E] Tree' })
+keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', { desc = '[E]xplorer' })
 
 -- ===================================================================
 -- FUZZY FINDING (fzf-lua)
@@ -69,15 +69,15 @@ keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', { desc = 'Fi
 
 keymap.set('n', '<leader>sf', function()
   require('fzf-lua').files { cwd = vim.uv.cwd() }
-end, { desc = 'Search [F]iles' })
+end, { desc = '[S]earch [F]iles' })
 
 keymap.set('n', '<leader>sb', function()
   require('fzf-lua').buffers {}
-end, { desc = 'Search [B]uffers' })
+end, { desc = '[S]earch [B]uffers' })
 
 keymap.set('n', '<leader>sg', function()
   require('fzf-lua').live_grep {}
-end, { desc = 'Search [G]rep' })
+end, { desc = '[S]earch [G]rep' })
 
 -- ===================================================================
 -- FUZZY FINDING (Telescope)
@@ -139,15 +139,15 @@ end, { desc = '[S]earch [N]eovim files' })
 
 keymap.set('n', 'gd', function()
   require('telescope.builtin').lsp_definitions()
-end, { desc = 'Go to [D]efinition' })
+end, { desc = '[G]oto [D]efinition' })
 
 keymap.set('n', 'gr', function()
   require('telescope.builtin').lsp_references()
-end, { desc = 'Find [R]eferences' })
+end, { desc = '[G]oto [R]eferences' })
 
 keymap.set('n', 'gI', function()
   require('telescope.builtin').lsp_implementations()
-end, { desc = 'Go to [I]mplementation' })
+end, { desc = '[G]oto [I]mplementation' })
 
 keymap.set('n', '<leader>D', function()
   require('telescope.builtin').lsp_type_definitions()
@@ -224,25 +224,25 @@ local function setup_git_keymaps(bufnr)
   -- visual mode
   map('v', '<leader>hs', function()
     gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
-  end, { desc = 'stage git hunk' })
+  end, { desc = '[H]unk [S]tage' })
   map('v', '<leader>hr', function()
     gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
-  end, { desc = 'reset git hunk' })
+  end, { desc = '[H]unk [R]eset' })
   -- normal mode
-  map('n', '<leader>hs', gitsigns.stage_hunk, { desc = 'git [s]tage hunk' })
-  map('n', '<leader>hr', gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
-  map('n', '<leader>hS', gitsigns.stage_buffer, { desc = 'git [S]tage buffer' })
-  map('n', '<leader>hu', gitsigns.undo_stage_hunk, { desc = 'git [u]ndo stage hunk' })
-  map('n', '<leader>hR', gitsigns.reset_buffer, { desc = 'git [R]eset buffer' })
-  map('n', '<leader>hp', gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
-  map('n', '<leader>hb', gitsigns.blame_line, { desc = 'git [b]lame line' })
-  map('n', '<leader>hd', gitsigns.diffthis, { desc = 'git [d]iff against index' })
+  map('n', '<leader>hs', gitsigns.stage_hunk, { desc = '[H]unk [S]tage' })
+  map('n', '<leader>hr', gitsigns.reset_hunk, { desc = '[H]unk [R]eset' })
+  map('n', '<leader>hS', gitsigns.stage_buffer, { desc = '[H]unk [S]tage Buffer' })
+  map('n', '<leader>hu', gitsigns.undo_stage_hunk, { desc = '[H]unk [U]ndo Stage' })
+  map('n', '<leader>hR', gitsigns.reset_buffer, { desc = '[H]unk [R]eset Buffer' })
+  map('n', '<leader>hp', gitsigns.preview_hunk, { desc = '[H]unk [P]review' })
+  map('n', '<leader>hb', gitsigns.blame_line, { desc = '[H]unk [B]lame Line' })
+  map('n', '<leader>hd', gitsigns.diffthis, { desc = '[H]unk [D]iff Index' })
   map('n', '<leader>hD', function()
     gitsigns.diffthis '@'
-  end, { desc = 'git [D]iff against last commit' })
+  end, { desc = '[H]unk [D]iff Last Commit' })
   -- Toggles
-  map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle git show [b]lame line' })
-  map('n', '<leader>tD', gitsigns.toggle_deleted, { desc = '[T]oggle git show [D]eleted' })
+  map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle [B]lame Line' })
+  map('n', '<leader>tD', gitsigns.toggle_deleted, { desc = '[T]oggle [D]eleted' })
 end
 
 -- Export the function so it can be used by gitsigns configuration
@@ -293,11 +293,11 @@ end, { desc = 'Debug: Step Out' })
 
 keymap.set('n', '<leader>b', function()
   require('dap').toggle_breakpoint()
-end, { desc = 'Debug: Toggle Breakpoint' })
+end, { desc = '[B]reakpoint Toggle' })
 
 keymap.set('n', '<leader>B', function()
   require('dap').set_breakpoint(vim.fn.input 'Breakpoint condition: ')
-end, { desc = 'Debug: Set Breakpoint' })
+end, { desc = '[B]reakpoint Conditional' })
 
 keymap.set('n', '<F7>', function()
   require('dapui').toggle()
@@ -307,26 +307,26 @@ end, { desc = 'Debug: See last session result.' })
 -- DIAGNOSTICS (Trouble)
 -- ===================================================================
 
-keymap.set('n', '<leader>xx', '<cmd>Trouble diagnostics toggle<cr>', { desc = 'Diagnostics (Trouble)' })
-keymap.set('n', '<leader>xX', '<cmd>Trouble diagnostics toggle filter.buf=0<cr>', { desc = 'Buffer Diagnostics (Trouble)' })
-keymap.set('n', '<leader>xs', '<cmd>Trouble symbols toggle focus=false<cr>', { desc = 'Symbols (Trouble)' })
-keymap.set('n', '<leader>xl', '<cmd>Trouble lsp toggle focus=false win.position=right<cr>', { desc = 'LSP Definitions / references / ... (Trouble)' })
-keymap.set('n', '<leader>xL', '<cmd>Trouble loclist toggle<cr>', { desc = 'Location List (Trouble)' })
-keymap.set('n', '<leader>xq', '<cmd>Trouble qflist toggle<cr>', { desc = 'Quickfix List (Trouble)' })
+keymap.set('n', '<leader>xx', '<cmd>Trouble diagnostics toggle<cr>', { desc = 'E[x]tra Diagnostics' })
+keymap.set('n', '<leader>xX', '<cmd>Trouble diagnostics toggle filter.buf=0<cr>', { desc = 'E[x]tra Buffer Diagnostics' })
+keymap.set('n', '<leader>xs', '<cmd>Trouble symbols toggle focus=false<cr>', { desc = 'E[x]tra [S]ymbols' })
+keymap.set('n', '<leader>xl', '<cmd>Trouble lsp toggle focus=false win.position=right<cr>', { desc = 'E[x]tra [L]SP References' })
+keymap.set('n', '<leader>xL', '<cmd>Trouble loclist toggle<cr>', { desc = 'E[x]tra [L]ocation List' })
+keymap.set('n', '<leader>xq', '<cmd>Trouble qflist toggle<cr>', { desc = 'E[x]tra [Q]uickfix List' })
 
 -- ===================================================================
 -- CODE COMPILATION (Compiler.nvim)
 -- ===================================================================
 
-keymap.set('n', '<leader>cco', '<cmd>CompilerOpen<cr>', { desc = '[O]pen Compiler' })
-keymap.set('n', '<leader>ccr', '<cmd>CompilerRedo<cr>', { desc = '[R]edo Compiler' })
-keymap.set('n', '<leader>ccs', '<cmd>CompileToggleResults<cr>', { desc = 'Toggle Compiler [S]tate' })
+keymap.set('n', '<leader>cco', '<cmd>CompilerOpen<cr>', { desc = '[C]ode [C]ompiler [O]pen' })
+keymap.set('n', '<leader>ccr', '<cmd>CompilerRedo<cr>', { desc = '[C]ode [C]ompiler [R]edo' })
+keymap.set('n', '<leader>ccs', '<cmd>CompileToggleResults<cr>', { desc = '[C]ode [C]ompiler [S]tatus' })
 
 -- ===================================================================
 -- VIM COACHING (Coach.nvim)
 -- ===================================================================
 
-keymap.set('n', '<leader>?', '<cmd>VimCoach<cr>', { desc = 'Vim Coach' })
+keymap.set('n', '<leader>?', '<cmd>VimCoach<cr>', { desc = 'Vim Coach [?]' })
 
 -- ===================================================================
 -- UTILITIES (Snacks)
@@ -334,23 +334,23 @@ keymap.set('n', '<leader>?', '<cmd>VimCoach<cr>', { desc = 'Vim Coach' })
 
 keymap.set('n', '<leader>.', function()
   require('snacks').scratch()
-end, { desc = 'Toggle [S]cratch Buffer' })
+end, { desc = 'Toggle Scratch [.]' })
 
 keymap.set('n', '<leader>S', function()
   require('snacks').scratch.select()
-end, { desc = 'Select [S]cratch Buffer' })
+end, { desc = '[S]cratch Select' })
 
 keymap.set('n', '<leader>lg', function()
   require('snacks').lazygit()
-end, { desc = 'Lazy [G]it' })
+end, { desc = '[L]azy[G]it' })
 
 keymap.set('n', '<leader>n', function()
   require('snacks').notifier.show_history()
-end, { desc = '[N]otification History' })
+end, { desc = '[N]otifications History' })
 
 keymap.set('n', '<leader>un', function()
   require('snacks').notifier.hide()
-end, { desc = 'Dismiss All Notifications' })
+end, { desc = '[U]ndo [N]otifications' })
 
 -- ===================================================================
 -- TREESITTER TEXT OBJECTS (Repeatable moves)
