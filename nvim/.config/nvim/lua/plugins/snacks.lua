@@ -1,42 +1,5 @@
 return {
   'folke/snacks.nvim',
-  keys = {
-    {
-      '<leader>.',
-      function()
-        Snacks.scratch()
-      end,
-      desc = 'Toggle [S]cratch Buffer',
-    },
-    {
-      '<leader>S',
-      function()
-        Snacks.scratch.select()
-      end,
-      desc = 'Select [S]cratch Buffer',
-    },
-    {
-      '<leader>lg',
-      function()
-        Snacks.lazygit()
-      end,
-      desc = 'Lazy [G]it',
-    },
-    {
-      '<leader>n',
-      function()
-        Snacks.notifier.show_history()
-      end,
-      desc = '[N]otification History',
-    },
-    {
-      '<leader>un',
-      function()
-        Snacks.notifier.hide()
-      end,
-      desc = 'Dismiss All Notifications',
-    },
-  },
   priority = 1000,
   lazy = false,
   opts = {

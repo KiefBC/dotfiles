@@ -25,8 +25,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
   },
   config = function()
     local todo_comments = require 'todo-comments'
-
-    local keymap = vim.keymap -- Alias to make it easier to use
     -- Telescope is a fuzzy finder that comes with a lot of different things that
     -- it can fuzzy find! It's more than just a "file finder", it can search
     -- many different aspects of Neovim, your workspace, LSP, and more!
@@ -69,82 +67,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
 
-    -- See `:help telescope.builtin`
-    local builtin = require 'telescope.builtin'
-    keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
-    keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-    -- keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
-    keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
-    keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-    -- keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-    keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-    keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
-    keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-    keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-    -- Slightly advanced example of overriding default behavior and theme
-    keymap.set('n', '<leader>/', function()
-      -- You can pass additional configuration to Telescope to change the theme, layout, etc.
-      builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-        winblend = 10,
-        previewer = false,
-      })
-    end, { desc = '[/] Fuzzily search in current buffer' })
-    -- It's also possible to pass additional configuration options.
-    --  See `:help telescope.builtin.live_grep()` for information about particular keys
-    keymap.set('n', '<leader>s/', function()
-      builtin.live_grep {
-        grep_open_files = true,
-        prompt_title = 'Live Grep in Open Files',
-      }
-    end, { desc = '[S]earch [/] in Open Files' })
-    -- Shortcut for searching your Neovim configuration files
-    keymap.set('n', '<leader>sn', function()
-      builtin.find_files { cwd = vim.fn.stdpath 'config' }
-    end, { desc = '[S]earch [N]eovim files' })
-
-    -- Jump to definition of the word under the cursor
-    keymap.set('n', 'gd', builtin.lsp_definitions, { desc = 'Go to [D]efinition' })
-
-    -- Find references for the word under the cursor
-    keymap.set('n', 'gr', builtin.lsp_references, { desc = 'Find [R]eferences' })
-
-    -- Jump to the implementation of the word under the cursor
-    keymap.set('n', 'gI', builtin.lsp_implementations, { desc = 'Go to [I]mplementation' })
-
-    -- Jump to the type of the word under the cursor
-    keymap.set('n', '<leader>D', builtin.lsp_type_definitions, { desc = 'Type [D]efinition' })
-
-    -- Fuzzy find all the symbols in your current document
-    keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, { desc = '[D]ocument [S]ymbols' })
-
-    -- Fuzzy find all the symbols in your current workspace
-    keymap.set('n', '<leader>ws', builtin.lsp_workspace_symbols, { desc = '[W]orkspace [S]ymbols' })
-
-    -- Rename the variable under the cursor
-    -- keymap.set('n', '<leader>rn', builtin.lsp_rename, { desc = '[R]e[n]ame' })
-
-    -- Execute a code action, usually your cursor needs to be on top of an error
-    -- keymap.set('n', '<leader>ca', builtin.lsp_code_actions, { desc = '[C]ode [A]ction' })
-
-    keymap.set('n', ']t', function()
-      todo_comments.jump_next()
-    end, { desc = 'Jump to next todo' })
-
-    keymap.set('n', '[t', function()
-      todo_comments.jump_prev()
-    end, { desc = 'Jump to previous todo' })
-
-    -- WARN: This is not Goto Definition, this is Goto Declaration
-    -- For example, in C this would take you to the header
-    -- keymap.set('n', 'gD', builtin.lsp_declarations, { desc = 'Go to [D]eclaration' })
-    -- This will allow you to toggle inlay hints in your code, if the LSP supports it
-
-    -- See `:help lsp.buf_inlay_hints()` for more information
-    if vim.client and vim.client.supports_method 'textDocument/inlayHint' then
-      keymap.set('n', '<leader>th', function()
-        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
-      end, { desc = '[T]oggle Inlay [H]ints' })
-    end
     todo_comments.setup()
   end,
 }
