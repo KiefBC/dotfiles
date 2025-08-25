@@ -7,12 +7,7 @@ return {
       'nvim-telescope/telescope.nvim',
     },
     opts = {},
-    keys = {
-      -- Code Compile Options
-      { '<leader>cco', '<cmd>CompilerOpen<cr>', desc = '[O]pen Compiler' },
-      { '<leader>ccr', '<cmd>CompilerRedo<cr>', desc = '[R]edo Compiler' },
-      { '<leader>ccs', '<cmd>CompileToggleResults<cr>', desc = 'Toggle Compiler [S]tate' },
-    },
+    -- Note: Keymaps moved to lua/core/keymaps.lua for centralization
   },
   { -- TODO: Configure to work with DAP, until then, config will be commented out
     'stevearc/overseer.nvim',

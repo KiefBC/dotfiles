@@ -161,6 +161,12 @@ keymap.set('n', '<leader>ws', function()
   require('telescope.builtin').lsp_workspace_symbols()
 end, { desc = '[W]orkspace [S]ymbols' })
 
+-- LSP Actions (buffer-local, set in LspAttach autocmd)
+keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = '[R]e[n]ame' })
+keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = '[C]ode [A]ction' })
+keymap.set('x', '<leader>ca', vim.lsp.buf.code_action, { desc = '[C]ode [A]ction' })
+keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = '[G]oto [D]eclaration' })
+
 -- ===================================================================
 -- TODO COMMENTS (Telescope integration)
 -- ===================================================================
@@ -243,6 +249,13 @@ end
 _G.setup_git_keymaps = setup_git_keymaps
 
 -- ===================================================================
+-- CODE COMMENTING (Comment.nvim)
+-- ===================================================================
+
+keymap.set('n', '<Leader>V', '<Plug>(comment_toggle_blockwise_current)', { desc = 'Comment' })
+keymap.set('x', '<Leader>V', '<Plug>(comment_toggle_blockwise_visual)', { desc = 'Comment' })
+
+-- ===================================================================
 -- CODE FORMATTING (Conform)
 -- ===================================================================
 
@@ -300,6 +313,20 @@ keymap.set('n', '<leader>xs', '<cmd>Trouble symbols toggle focus=false<cr>', { d
 keymap.set('n', '<leader>xl', '<cmd>Trouble lsp toggle focus=false win.position=right<cr>', { desc = 'LSP Definitions / references / ... (Trouble)' })
 keymap.set('n', '<leader>xL', '<cmd>Trouble loclist toggle<cr>', { desc = 'Location List (Trouble)' })
 keymap.set('n', '<leader>xq', '<cmd>Trouble qflist toggle<cr>', { desc = 'Quickfix List (Trouble)' })
+
+-- ===================================================================
+-- CODE COMPILATION (Compiler.nvim)
+-- ===================================================================
+
+keymap.set('n', '<leader>cco', '<cmd>CompilerOpen<cr>', { desc = '[O]pen Compiler' })
+keymap.set('n', '<leader>ccr', '<cmd>CompilerRedo<cr>', { desc = '[R]edo Compiler' })
+keymap.set('n', '<leader>ccs', '<cmd>CompileToggleResults<cr>', { desc = 'Toggle Compiler [S]tate' })
+
+-- ===================================================================
+-- VIM COACHING (Coach.nvim)
+-- ===================================================================
+
+keymap.set('n', '<leader>?', '<cmd>VimCoach<cr>', { desc = 'Vim Coach' })
 
 -- ===================================================================
 -- UTILITIES (Snacks)
