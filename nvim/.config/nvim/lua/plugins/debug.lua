@@ -42,6 +42,7 @@ return {
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
         'delve',
+        'codelldb', -- Rust debugger
       },
     }
 
@@ -77,6 +78,107 @@ return {
         -- On Windows delve must be run attached or it crashes.
         -- See https://github.com/leoluz/nvim-dap-go/blob/main/README.md#configuring
         detached = vim.fn.has 'win32' == 0,
+      },
+    }
+
+    -- Rust debugging configuration
+    dap.configurations.rust = {
+      {
+        name = 'Launch',
+        type = 'codelldb',
+        request = 'launch',
+        program = function()
+          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+        args = {},
+      },
+      {
+        name = 'Debug Test',
+        type = 'codelldb',
+        request = 'launch',
+        program = function()
+          -- Build test binary and capture output
+          vim.notify('Building tests...', vim.log.levels.INFO)
+          local build_output = vim.fn.system 'cargo test --no-run --message-format=json 2>&1'
+
+          -- Parse JSON output to find test executable
+          local executables = {}
+          for line in build_output:gmatch '[^\r\n]+' do
+            local ok, json = pcall(vim.fn.json_decode, line)
+            if ok and json and json.executable and json.profile and json.profile.test then
+              table.insert(executables, json.executable)
+            end
+          end
+
+          if #executables > 0 then
+            -- Return the most recent test executable (usually the last one)
+            return executables[#executables]
+          end
+
+          -- Fallback: try to find test executables in deps directory
+          local deps_dir = vim.fn.getcwd() .. '/target/debug/deps/'
+          local find_cmd = string.format("find '%s' -type f -perm +111 -newer '%s../build' 2>/dev/null | grep -v '\\.d$' | tail -1", deps_dir, deps_dir)
+          local found_exec = vim.fn.system(find_cmd):gsub('%s+$', '')
+
+          if found_exec ~= '' and vim.fn.filereadable(found_exec) == 1 then
+            return found_exec
+          end
+
+          vim.notify('Could not find test executable. Please select manually.', vim.log.levels.WARN)
+          return vim.fn.input('Path to test executable: ', deps_dir, 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+        args = {},
+        runInTerminal = false,
+      },
+      {
+        name = 'Debug Current Test',
+        type = 'codelldb',
+        request = 'launch',
+        program = function()
+          -- Build test binary and capture output
+          vim.notify('Building tests...', vim.log.levels.INFO)
+          local build_output = vim.fn.system 'cargo test --no-run --message-format=json 2>&1'
+
+          -- Parse JSON output to find test executable
+          local executables = {}
+          for line in build_output:gmatch '[^\r\n]+' do
+            local ok, json = pcall(vim.fn.json_decode, line)
+            if ok and json and json.executable and json.profile and json.profile.test then
+              table.insert(executables, json.executable)
+            end
+          end
+
+          if #executables > 0 then
+            -- Return the most recent test executable (usually the last one)
+            return executables[#executables]
+          end
+
+          -- Fallback: try to find test executables in deps directory
+          local deps_dir = vim.fn.getcwd() .. '/target/debug/deps/'
+          local find_cmd = string.format("find '%s' -type f -perm +111 -newer '%s../build' 2>/dev/null | grep -v '\\.d$' | tail -1", deps_dir, deps_dir)
+          local found_exec = vim.fn.system(find_cmd):gsub('%s+$', '')
+
+          if found_exec ~= '' and vim.fn.filereadable(found_exec) == 1 then
+            return found_exec
+          end
+
+          vim.notify('Could not find test executable. Please select manually.', vim.log.levels.WARN)
+          return vim.fn.input('Path to test executable: ', deps_dir, 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+        args = function()
+          -- Get test name under cursor
+          local test_name = vim.fn.expand '<cword>'
+          if test_name ~= '' then
+            return { test_name, '--exact', '--nocapture' }
+          end
+          return { '--nocapture' }
+        end,
       },
     }
   end,

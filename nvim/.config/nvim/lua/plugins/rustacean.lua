@@ -24,7 +24,7 @@ return {
     },
   },
   {
-    -- INFO: This is for managing out Rust crates
+    -- INFO: This is for managing our Rust crates
     -- https://github.com/Saecki/crates.nvim
     {
       'saecki/crates.nvim',

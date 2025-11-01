@@ -291,13 +291,25 @@ keymap.set('n', '<F3>', function()
   require('dap').step_out()
 end, { desc = 'Debug: Step Out' })
 
-keymap.set('n', '<leader>b', function()
+keymap.set('n', '<leader>db', function()
   require('dap').toggle_breakpoint()
-end, { desc = '[B]reakpoint Toggle' })
+end, { desc = '[D]ebug [B]reakpoint Toggle' })
 
-keymap.set('n', '<leader>B', function()
+keymap.set('n', '<leader>dB', function()
   require('dap').set_breakpoint(vim.fn.input 'Breakpoint condition: ')
-end, { desc = '[B]reakpoint Conditional' })
+end, { desc = '[D]ebug [B]reakpoint Conditional' })
+
+keymap.set('n', '<leader>dc', function()
+  require('dap').continue()
+end, { desc = '[D]ebug [C]ontinue' })
+
+keymap.set('n', '<leader>dr', function()
+  require('dap').repl.open()
+end, { desc = '[D]ebug [R]EPL' })
+
+keymap.set('n', '<leader>dt', function()
+  require('dapui').toggle()
+end, { desc = '[D]ebug [T]oggle UI' })
 
 keymap.set('n', '<F7>', function()
   require('dapui').toggle()

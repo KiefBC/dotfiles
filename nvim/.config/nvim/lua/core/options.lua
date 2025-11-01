@@ -76,3 +76,10 @@ vim.opt.scrolloff = 10
 
 -- This is for Tiny Inline Diagnostic
 vim.diagnostic.config { virtual_text = false }
+
+-- Code folding with Tree-sitter
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldlevel = 99 -- Start with all folds open
+vim.opt.foldlevelstart = 99 -- Open all folds when opening a file
+vim.opt.foldenable = true
