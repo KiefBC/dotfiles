@@ -329,6 +329,18 @@ keymap.set('n', '<leader>ccs', '<cmd>CompileToggleResults<cr>', { desc = '[C]ode
 keymap.set('n', '<leader>?', '<cmd>VimCoach<cr>', { desc = 'Vim Coach [?]' })
 
 -- ===================================================================
+-- SIDEKICK
+-- ===================================================================
+
+keymap.set('n', '<leader>aa', function()
+  require('sidekick.cli').toggle { focus = true }
+end, { desc = 'Sidekick Toggle CLI' })
+
+keymap.set('n', '<leader>ap', function()
+  require('sidekick.cli').select_prompt()
+end, { desc = 'Sidekick Prompt Picker' })
+
+-- ===================================================================
 -- UTILITIES (Snacks)
 -- ===================================================================
 
@@ -359,14 +371,16 @@ end, { desc = '[U]ndo [N]otifications' })
 -- Note: These require treesitter-textobjects to be loaded first
 vim.defer_fn(function()
   local ts_repeat_move = require 'nvim-treesitter.textobjects.repeatable_move'
-  
+
   -- Vim way: ; goes to the direction you were moving.
   keymap.set({ 'n', 'x', 'o' }, ';', ts_repeat_move.repeat_last_move)
   keymap.set({ 'n', 'x', 'o' }, ',', ts_repeat_move.repeat_last_move_opposite)
-  
+
   -- Make builtin f, F, t, T also repeatable with ; and ,
   keymap.set({ 'n', 'x', 'o' }, 'f', ts_repeat_move.builtin_f)
   keymap.set({ 'n', 'x', 'o' }, 'F', ts_repeat_move.builtin_F)
   keymap.set({ 'n', 'x', 'o' }, 't', ts_repeat_move.builtin_t)
   keymap.set({ 'n', 'x', 'o' }, 'T', ts_repeat_move.builtin_T)
 end, 100)
+
+vim.keymap.set('n', '<leader>cC', '<cmd>ClaudeCode<CR>', { desc = 'Toggle Claude [C]ode' })

@@ -27,7 +27,20 @@ return {
     -- lazy.nvim will automatically load the plugin when it's required by blink.cmp
     lazy = true,
     -- make sure to set opts so that lazy.nvim calls blink.compat's setup
-    opts = {},
+    opts = {
+      keymap = {
+        ['<Tab>'] = {
+          'snippet_forward',
+          function() -- sidekick next edit suggestion
+            return require('sidekick').nes_jump_or_apply()
+          end,
+          function() -- if you are using Neovim's native inline completions
+            return vim.lsp.inline_completion.get()
+          end,
+          'fallback',
+        },
+      },
+    },
   },
   {
     {
@@ -96,7 +109,7 @@ return {
         },
 
         sources = {
-          default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot', 'lazydev', 'codecompanion' },
+          default = { 'lsp', 'path', 'snippets', 'buffer', 'lazydev', 'copilot' },
           providers = {
             lsp = { fallbacks = { 'lazydev' } },
             lazydev = {
@@ -118,11 +131,11 @@ return {
                 return items
               end,
             },
-            codecompanion = {
-              name = 'CodeCompanion',
-              module = 'codecompanion.providers.completion.blink',
-              enabled = true,
-            },
+            -- codecompanion = {
+            --   name = 'CodeCompanion',
+            --   module = 'codecompanion.providers.completion.blink',
+            --   enabled = true,
+            -- },
           },
         },
       },

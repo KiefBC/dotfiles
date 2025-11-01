@@ -53,9 +53,12 @@ return {
       })
 
       -- Configure LSP servers using vim.lsp.config() for Neovim 0.11+
+      -- Suppress position encoding warnings for undefined symbols
+      vim.lsp.set_log_level 'ERROR'
 
       -- Lua Language Server
       vim.lsp.config('lua_ls', {
+        offset_encoding = 'utf-16',
         settings = {
           Lua = {
             diagnostics = {
@@ -67,11 +70,13 @@ return {
 
       -- Clangd for C/C++
       vim.lsp.config('clangd', {
+        offset_encoding = 'utf-16',
         cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose', '--completion-style=detailed' },
       })
 
       -- Ruff for Python
       vim.lsp.config('ruff', {
+        offset_encoding = 'utf-16',
         init_options = {
           settings = {
             lineLength = 200,
@@ -95,11 +100,49 @@ return {
         root_markers = { 'Package.swift', '.git' },
       })
 
+      -- Bash Language Server
+      vim.lsp.config('bashls', {})
+
+      -- TypeScript/JavaScript Language Server
+      vim.lsp.config('ts_ls', {
+        offset_encoding = 'utf-16',
+      })
+
+      -- Svelte Language Server
+      vim.lsp.config('svelte', {})
+
+      -- Tailwind CSS Language Server
+      vim.lsp.config('tailwindcss', {})
+
+      -- HTML Language Server
+      vim.lsp.config('html', {})
+
+      -- CSS Language Server
+      vim.lsp.config('cssls', {})
+
+      -- Emmet Language Server
+      vim.lsp.config('emmet_ls', {
+        filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'svelte' },
+      })
+
+      -- Copilot LSP for Sidekick
+      vim.lsp.config('copilot', {
+        cmd = { 'copilot-language-server', '--stdio' },
+      })
+
       -- Enable the LSP servers
       vim.lsp.enable 'lua_ls'
       vim.lsp.enable 'clangd'
       vim.lsp.enable 'ruff'
       vim.lsp.enable 'sourcekit'
+      vim.lsp.enable 'bashls'
+      vim.lsp.enable 'ts_ls'
+      vim.lsp.enable 'svelte'
+      vim.lsp.enable 'tailwindcss'
+      vim.lsp.enable 'html'
+      vim.lsp.enable 'cssls'
+      vim.lsp.enable 'emmet_ls'
+      vim.lsp.enable 'copilot'
     end,
   },
 }

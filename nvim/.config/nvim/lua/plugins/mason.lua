@@ -21,7 +21,7 @@ return {
           'html',
           'cssls',
           'emmet_ls',
-          'swift_mesonls',
+          'copilot',
         },
       }
     end,
@@ -40,6 +40,8 @@ return {
           'pylint',
           'eslint_d',
           'codelldb',
+          'markdownlint',
+          'prettier',
         },
       }
     end,

@@ -41,7 +41,7 @@ return { -- Autoformat
       svelte = { 'prettierd' },
       css = { 'prettierd' },
       scss = { 'prettierd' },
-      markdown = { 'prettierd' },
+      markdown = { 'prettier' },
       yaml = { 'prettierd' },
       toml = { 'prettierd' },
       tyoeScript = { 'prettierd' },
