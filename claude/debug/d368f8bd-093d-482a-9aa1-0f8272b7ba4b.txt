@@ -1,0 +1,405 @@
+[DEBUG] Watching for changes in setting files /Users/kiefer/.claude/settings.json, /Users/kiefer/github/leetcode/rust_problems/.claude/settings.local.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] >>>>> getSkillsIfEnabled() CALLED <<<<<
+[DEBUG] ENABLE_SKILLS value: true, type: boolean
+[DEBUG] ENABLE_SKILLS check passed, loading skills...
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kiefer/.claude/skills, project=/Users/kiefer/github/leetcode/rust_problems/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/kiefer/.zshrc
+[DEBUG] Snapshots directory: /Users/kiefer/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/kiefer/.claude/shell-snapshots/snapshot-zsh-1761796098922-xlhhne.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/kiefer/.claude/todos/d368f8bd-093d-482a-9aa1-0f8272b7ba4b-agent-d368f8bd-093d-482a-9aa1-0f8272b7ba4b.json.tmp.65852.1761796098923
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/kiefer/.claude/todos/d368f8bd-093d-482a-9aa1-0f8272b7ba4b-agent-d368f8bd-093d-482a-9aa1-0f8272b7ba4b.json.tmp.65852.1761796098923 to /Users/kiefer/.claude/todos/d368f8bd-093d-482a-9aa1-0f8272b7ba4b-agent-d368f8bd-093d-482a-9aa1-0f8272b7ba4b.json
+[DEBUG] File /Users/kiefer/.claude/todos/d368f8bd-093d-482a-9aa1-0f8272b7ba4b-agent-d368f8bd-093d-482a-9aa1-0f8272b7ba4b.json written atomically
+[DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/Users/kiefer/Library/Application Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/vendor/ripgrep/arm64-darwin/rg)
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] MCP server "acpPermission": Initializing HTTP transport to http://127.0.0.1:53873/mcp
+[DEBUG] MCP server "acpPermission": Node version: v24.4.1, Platform: darwin
+[DEBUG] MCP server "acpPermission": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "context7": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "dash-api": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "acpPermission": MTLS options: default
+[DEBUG] MCP server "acpPermission": HTTP transport options: {"url":"http://127.0.0.1:53873/mcp","headers":{"User-Agent":"claude-code/2.0.27","x-acp-proxy-session-id":"019a333b-0714-7704-b928-5e9f60cc3ff6"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "acpPermission": HTTP transport created successfully
+[DEBUG] MCP server "acpPermission": Client created, setting up request handler
+[DEBUG] MCP server "acpPermission": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "acpPermission": Testing basic HTTP connectivity to http://127.0.0.1:53873/mcp
+[DEBUG] MCP server "acpPermission": Parsed URL: host=127.0.0.1, port=53873, protocol=http:
+[DEBUG] MCP server "acpPermission": Using loopback address: 127.0.0.1
+[DEBUG] MCP server "acpPermission": No token data found
+[ERROR] AggregateError: AggregateError
+    at eo.from (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:11:15035)
+    at UE.<anonymous> (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:29:10009)
+    at UE.emit (node:events:507:28)
+    at UE.emit (node:domain:489:12)
+    at ZQ1.<computed> (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:28:1117)
+    at ClientRequest.emit (node:events:507:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at emitErrorEvent (node:_http_client:104:11)
+    at TLSSocket.socketErrorListener (node:_http_client:518:5)
+    at TLSSocket.emit (node:events:507:28)
+    at g3A.request (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:31:2129)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at runNextTicks (node:internal/process/task_queues:69:3)
+    at listOnTimeout (node:internal/timers:569:9)
+    at process.processTimers (node:internal/timers:543:7)
+    at async dh2 (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:3574:15030)
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": Successfully connected to http server in 274ms
+[DEBUG] MCP server "acpPermission": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"acpPermission","version":"1.0.0"}}
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": HTTP connection dropped after 0s uptime
+[DEBUG] MCP server "acpPermission": Connection error: Streamable HTTP error: Failed to open SSE stream: Not Found
+[DEBUG] MCP server "acpPermission": HTTP connection dropped after 0s uptime
+[DEBUG] MCP server "acpPermission": Connection error: Streamable HTTP error: Failed to open SSE stream: Not Found
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.65852.1761796099581
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760451 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.65852.1761796099581 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.65852.1761796099938
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760451 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.65852.1761796099938 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Shell snapshot created successfully (172862 bytes)
+[ERROR] MCP server "context7" Server stderr: Context7 Documentation MCP Server running on stdio
+[DEBUG] MCP server "context7": Successfully connected to stdio server in 862ms
+[DEBUG] MCP server "context7": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Context7","version":"1.0.26"}}
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "dash-api": Successfully connected to stdio server in 1405ms
+[DEBUG] MCP server "dash-api": Connection established with capabilities: {"hasTools":true,"hasPrompts":true,"hasResources":true,"serverVersion":{"name":"Dash Documentation API","version":"1.19.0"}}
+[ERROR] MCP server "dash-api" Server stderr: Processing request of type ListToolsRequest
+Processing request of type ListPromptsRequest
+[ERROR] MCP server "dash-api" Server stderr: Processing request of type ListResourcesRequest
+[DEBUG] Stream started - received first chunk
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Edit" (0 before deduplication)
+[DEBUG] MCP server "acpPermission": Calling MCP tool: permission
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": Tool 'permission' still running (30s elapsed)
+[DEBUG] MCP server "acpPermission": Tool 'permission' still running (60s elapsed)
+[DEBUG] MCP server "acpPermission": Tool 'permission' completed successfully in 1m 3s
+[DEBUG] MCP server "acp": Calling MCP tool: Edit
+[ERROR] "MCP server \"acp\" The provided `old_string` does not appear in the file: \"        while l1.is_some() || l2.is_some() {\n            if l1.as_mut().unwrap().val < l2.as_mut().unwrap().val {\n                tail.next = l1.take();\n                tail = tail.next.as_mut().unwrap();\n                l1 = tail.next.take();\n            } else {\n                tail.next = l2.take();\n                tail = tail.next.as_mut().unwrap();\n                l2 = tail.next.take();\n            }\n        }\".\n\nNo edits were applied."
+[DEBUG] "MCP server \"acp\": Tool 'Edit' failed after 0s: The provided `old_string` does not appear in the file: \"        while l1.is_some() || l2.is_some() {\n            if l1.as_mut().unwrap().val < l2.as_mut().unwrap().val {\n                tail.next = l1.take();\n                tail = tail.next.as_mut().unwrap();\n                l1 = tail.next.take();\n            } else {\n                tail.next = l2.take();\n                tail = tail.next.as_mut().unwrap();\n                l2 = tail.next.take();\n            }\n        }\".\n\nNo edits were applied."
+[ERROR] "Error: Error: The provided `old_string` does not appear in the file: \"        while l1.is_some() || l2.is_some() {\n            if l1.as_mut().unwrap().val < l2.as_mut().unwrap().val {\n                tail.next = l1.take();\n                tail = tail.next.as_mut().unwrap();\n                l1 = tail.next.take();\n            } else {\n                tail.next = l2.take();\n                tail = tail.next.as_mut().unwrap();\n                l2 = tail.next.take();\n            }\n        }\".\n\nNo edits were applied.\n    at PWQ (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:1399:7538)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Object.call (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:1399:18874)\n    at async vj6 (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:2685:65482)\n    at async Eq2 (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:2685:62539)\n    at async _j6 (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:2685:61391)\n    at async yj6 (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:2685:60874)\n    at async IS (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:2685:57634)\n    at async Im2 (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:3706:5760)\n    at async _ (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:3717:863)"
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Read" (0 before deduplication)
+[DEBUG] MCP server "acp": Calling MCP tool: Read
+[DEBUG] MCP server "acp": Tool 'Read' completed successfully in 31ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__acp__Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Edit" (0 before deduplication)
+[DEBUG] MCP server "acpPermission": Calling MCP tool: permission
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": Tool 'permission' completed successfully in 5s
+[DEBUG] MCP server "acp": Calling MCP tool: Edit
+[DEBUG] MCP server "acp": Tool 'Edit' completed successfully in 191ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__acp__Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Edit" (0 before deduplication)
+[DEBUG] MCP server "acpPermission": Calling MCP tool: permission
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": Tool 'permission' still running (30s elapsed)
+[DEBUG] MCP server "acpPermission": Tool 'permission' still running (60s elapsed)
+[DEBUG] MCP server "acpPermission": Tool 'permission' still running (90s elapsed)
+[DEBUG] MCP server "acpPermission": Tool 'permission' completed successfully in 1m 48s
+[DEBUG] MCP server "acp": Calling MCP tool: Edit
+[DEBUG] MCP server "acp": Tool 'Edit' completed successfully in 58ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__acp__Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Read" (0 before deduplication)
+[DEBUG] MCP server "acp": Calling MCP tool: Read
+[DEBUG] MCP server "acp": Tool 'Read' completed successfully in 1ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__acp__Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Edit" (0 before deduplication)
+[DEBUG] MCP server "acpPermission": Calling MCP tool: permission
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": Tool 'permission' still running (30s elapsed)
+[DEBUG] MCP server "acpPermission": Tool 'permission' completed successfully in 38s
+[DEBUG] MCP server "acp": Calling MCP tool: Edit
+[DEBUG] MCP server "acp": Tool 'Edit' completed successfully in 62ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__acp__Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Read" (0 before deduplication)
+[DEBUG] MCP server "acp": Calling MCP tool: Read
+[DEBUG] MCP server "acp": Tool 'Read' completed successfully in 7ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__acp__Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Bash" (0 before deduplication)
+[DEBUG] MCP server "acpPermission": Calling MCP tool: permission
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": Tool 'permission' completed successfully in 26s
+[DEBUG] MCP server "acp": Calling MCP tool: Bash
+[DEBUG] MCP server "acp": Tool 'Bash' completed successfully in 574ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__acp__Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Write" (0 before deduplication)
+[DEBUG] MCP server "acpPermission": Calling MCP tool: permission
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": Tool 'permission' still running (30s elapsed)
+[DEBUG] MCP server "acpPermission": Tool 'permission' still running (60s elapsed)
+[DEBUG] MCP server "acpPermission": Tool 'permission' completed successfully in 1m 21s
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Read" (0 before deduplication)
+[DEBUG] MCP server "acp": Calling MCP tool: Read
+[DEBUG] MCP server "acp": Tool 'Read' completed successfully in 1ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__acp__Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] Streaming aborted by user: Request was aborted.
+[ERROR] Error in non-streaming fallback: Request was aborted.
+[ERROR] "Error: Error: Request was aborted.\n    at uy.makeRequest (file:///Users/kiefer/Library/Application%20Support/Zed/external_agents/claude-code-acp/0.8.0/node_modules/@anthropic-ai/claude-agent-sdk/cli.js:357:3850)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__acp__Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__acp__Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__acp__Edit" (0 before deduplication)
+[DEBUG] MCP server "acpPermission": Calling MCP tool: permission
+[DEBUG] MCP server "acpPermission": No token data found
+[DEBUG] MCP server "acpPermission": Tool 'permission' completed successfully in 21s
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "acpPermission": HTTP connection closed after 56930s (with errors)
+[DEBUG] Cleaned up session snapshot: /Users/kiefer/.claude/shell-snapshots/snapshot-zsh-1761796098922-xlhhne.sh
+[DEBUG] MCP server "context7": Sending SIGINT to MCP server process
+[DEBUG] MCP server "dash-api": Sending SIGINT to MCP server process
+[DEBUG] MCP server "context7": STDIO connection closed after 56929s (cleanly)
+[DEBUG] MCP server "dash-api": SIGINT failed, sending SIGTERM to MCP server process
+[DEBUG] MCP server "dash-api": STDIO connection closed after 56929s (cleanly)
+[DEBUG] MCP server "dash-api": MCP server process exited cleanly

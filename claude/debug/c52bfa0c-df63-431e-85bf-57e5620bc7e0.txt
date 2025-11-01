@@ -1,0 +1,10 @@
+[DEBUG] [Query.streamInput] Starting to process input stream
+[DEBUG] [Query.streamInput] this.sdkMcpTransports.size = 1
+[DEBUG] [Query.streamInput] Processing message 1: user
+[DEBUG] [Query.streamInput] Processing message 2: user
+[DEBUG] [Query.streamInput] Processing message 3: user
+[DEBUG] [Query.streamInput] Processing message 4: user
+[DEBUG] [Query.streamInput] Processing message 5: user
+[DEBUG] [Query.streamInput] Processing message 6: user
+[DEBUG] [Query.streamInput] Processing message 7: user
+[DEBUG] [Query.streamInput] Processing message 8: user

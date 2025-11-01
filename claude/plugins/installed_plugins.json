@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "plugins": {
+    "daddy-claude@kiefx-plugins": {
+      "version": "1.0.0",
+      "installedAt": "2025-11-01T17:40:47.121Z",
+      "lastUpdated": "2025-11-01T17:40:47.121Z",
+      "installPath": "/Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/daddy-claude",
+      "isLocal": true
+    }
+  }
+}

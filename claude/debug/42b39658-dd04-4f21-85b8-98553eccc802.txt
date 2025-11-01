@@ -1,0 +1,2 @@
+[DEBUG] [Query.streamInput] Starting to process input stream
+[DEBUG] [Query.streamInput] this.sdkMcpTransports.size = 1

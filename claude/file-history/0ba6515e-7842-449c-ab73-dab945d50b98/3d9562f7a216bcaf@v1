@@ -1,0 +1,57 @@
+struct Solution;
+
+impl Solution {
+    pub fn longest_palindrome(s: String) -> String {
+        if s.is_empty() {
+            return String::new();
+        }
+
+        let chars: Vec<char> = s.chars().collect();
+        let mut sp: usize = 0;
+        let mut ep: usize = 0;
+
+        for i in 0..chars.len() {
+            let first_len: usize = expand(&chars, i, i);
+            let second_len: usize = expand(&chars, i, i + 1);
+            let cp: usize = first_len.max(second_len);
+
+            if cp > ep {
+                ep = cp;
+                sp = i - (cp - 1) / 2;
+            }
+        }
+
+        chars[sp..sp + ep].iter().collect()
+    }
+}
+
+fn expand(c: &[char], mut l: usize, mut r: usize) -> usize {
+    while r < c.len() && c[l] == c[r] {
+        if l == 0 {
+            break;
+        }
+
+        l -= 1;
+        r += 1;
+    }
+
+    if l == 0 && r < c.len() && c[l] == c[r] {
+        r + 1
+    } else {
+        r - l + 1
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_three_values() {
+        let input: String = "babad".to_string();
+        let expected: String = "bab".to_string();
+        let answer: String = Solution::longest_palindrome(input);
+
+        assert_eq!(expected, answer);
+    }
+}

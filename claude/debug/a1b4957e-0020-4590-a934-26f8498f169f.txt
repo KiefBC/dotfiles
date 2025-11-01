@@ -1,0 +1,453 @@
+[ERROR] SyntaxError: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:63:708
+    at Q (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:8:15070)
+    at L4A (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1373:29365)
+    at ZW (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1373:25369)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1466
+    at Array.flatMap (<anonymous>)
+    at nn5 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1453)
+    at gm (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1601)
+    at M0 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1533)
+[DEBUG] Watching for changes in setting files /Users/kiefer/.claude/settings.json...
+[DEBUG] Loading plugin daddy-claude from source: "./daddy-claude"
+[ERROR] Failed to load hooks for daddy-claude: Unexpected end of JSON input
+[ERROR] SyntaxError: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at SGQ (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:258)
+    at _GQ (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:2702)
+    at Ra8 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:5642)
+    at Oa8 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:4394)
+    at async file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:11803
+[DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+[DEBUG] Plugin not available for MCP: daddy-claude@kiefx-plugins - error type: hook-load-failed
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kiefer/.claude/skills, project=/Users/kiefer/.claude/plugins/marketplaces/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/kiefer/.zshrc
+[DEBUG] Snapshots directory: /Users/kiefer/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/kiefer/.claude/shell-snapshots/snapshot-zsh-1762018979508-s97o1k.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/kiefer/.claude/todos/a1b4957e-0020-4590-a934-26f8498f169f-agent-a1b4957e-0020-4590-a934-26f8498f169f.json.tmp.61142.1762018979509
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/kiefer/.claude/todos/a1b4957e-0020-4590-a934-26f8498f169f-agent-a1b4957e-0020-4590-a934-26f8498f169f.json.tmp.61142.1762018979509 to /Users/kiefer/.claude/todos/a1b4957e-0020-4590-a934-26f8498f169f-agent-a1b4957e-0020-4590-a934-26f8498f169f.json
+[DEBUG] File /Users/kiefer/.claude/todos/a1b4957e-0020-4590-a934-26f8498f169f-agent-a1b4957e-0020-4590-a934-26f8498f169f.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018979522
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65240 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018979522 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Plugin loading errors: Hook load failed: Unexpected end of JSON input
+[DEBUG] getPluginSkills: Processing 1 enabled plugins
+[DEBUG] Checking plugin daddy-claude: skillsPath=exists, skillsPaths=0 paths
+[DEBUG] Attempting to load skills from plugin daddy-claude default skillsPath: /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/daddy-claude/skills
+[DEBUG] Plugin loading errors: Hook load failed: Unexpected end of JSON input
+[DEBUG] Registered 0 hooks from 1 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] Loaded 1 skills from plugin daddy-claude default directory
+[DEBUG] Total plugin skills loaded: 1
+[DEBUG] Loaded 2 commands from plugin daddy-claude default directory
+[DEBUG] Total plugin commands loaded: 2
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 1 plugin skills
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018979614
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65240 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018979614 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018979623
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65240 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018979623 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018979630
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65240 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018979630 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/arm64-darwin/rg)
+[DEBUG] Plugin loading errors: Hook load failed: Unexpected end of JSON input
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Shell snapshot created successfully (172644 bytes)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018980199
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65240 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018980199 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018980291
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65135 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018980291 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018980298
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65135 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018980298 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018980305
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65135 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018980305 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] performStartupChecks called
+[DEBUG] Trust not accepted for current directory - skipping plugin installations
+[DEBUG] Plugin not available for MCP: daddy-claude@kiefx-plugins - error type: hook-load-failed
+[DEBUG] Plugin not available for MCP: daddy-claude@kiefx-plugins - error type: hook-load-failed
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018980321
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65135 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018980321 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762018980328
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65240 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762018980328 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Loaded plugins - Enabled: 1, Disabled: 0, Commands: 2, Agents: 0, Errors: 1
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for c21c815c-5db3-459c-a9ae-d5ffaf8f4396, tracking 0 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Read",
+        "ruleContent": "//Users/kiefer/.claude/**"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "session"
+  }
+]
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] No hook environment files found
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Permission suggestions for Read: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Read",
+        "ruleContent": "//Users/kiefer/.claude/**"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "session"
+  }
+]
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Read",
+        "ruleContent": "//Users/kiefer/Library/**"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "session"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 0e5afa77-e844-42c6-9c75-43014381fac6
+[DEBUG] FileHistory: Added snapshot for 0e5afa77-e844-42c6-9c75-43014381fac6, tracking 0 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] FileHistory: Tracked file modification for /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json
+[DEBUG] Writing to temp file: /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json.tmp.61142.1762019130797
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 192 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json.tmp.61142.1762019130797 to /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json
+[DEBUG] File /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message e2c62fff-3706-4738-a343-ae3280a8b27f
+[DEBUG] FileHistory: Added snapshot for e2c62fff-3706-4738-a343-ae3280a8b27f, tracking 1 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Writing to temp file: /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json.tmp.61142.1762019260164
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 220 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json.tmp.61142.1762019260164 to /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json
+[DEBUG] File /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 688878bb-bff7-4e9b-a34a-14ca40d4eb8b
+[DEBUG] FileHistory: Added snapshot for 688878bb-bff7-4e9b-a34a-14ca40d4eb8b, tracking 1 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "cat:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "python3:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: WebFetch
+[DEBUG] Getting matching hook commands for PreToolUse with query: WebFetch
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "WebFetch" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: WebFetch
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "WebFetch" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Writing to temp file: /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json.tmp.61142.1762019344302
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 237 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json.tmp.61142.1762019344302 to /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json
+[DEBUG] File /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/.mcp.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/kiefer/.claude/shell-snapshots/snapshot-zsh-1762018979508-s97o1k.sh
+[DEBUG] LSP server manager shut down successfully
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.61142.1762019402141
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65247 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.61142.1762019402141 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically

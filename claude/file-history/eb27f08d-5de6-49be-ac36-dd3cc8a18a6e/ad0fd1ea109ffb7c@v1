@@ -1,0 +1,94 @@
+use std::collections::HashMap;
+
+pub struct Solution;
+
+impl Solution {
+    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        for i in 0..nums.len() {
+            for j in (i + 1)..nums.len() {
+                if nums[i] + nums[j] == target {
+                    return vec![i as i32, j as i32];
+                }
+            }
+        }
+
+        vec![]
+    }
+
+    pub fn two_sum_x(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        let mut map: HashMap<i32, i32> = HashMap::new();
+
+        let map_tmp = 0..nums.len();
+        for i in map_tmp.clone() {
+            map.insert(nums[i], i as i32);
+        }
+
+        let check_tmp = map_tmp.clone();
+        for j in check_tmp {
+            let compliment: i32 = target - nums[j];
+
+            if let Some(&idx) = map.get(&compliment) {
+                return vec![j as i32, idx];
+            }
+        }
+
+        vec![]
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_two_sum_9() {
+        let tc: Vec<i32> = vec![2, 7, 11, 15];
+        let tc_target: i32 = 9;
+        let expected: Vec<i32> = vec![0, 1];
+
+        let answer: Vec<i32> = Solution::two_sum(tc.clone(), tc_target);
+        let answer_2: Vec<i32> = Solution::two_sum_x(tc.clone(), tc_target);
+
+        assert_eq!(answer, expected);
+        assert_eq!(answer_2, expected)
+    }
+
+    #[test]
+    fn test_two_sum_6() {
+        let tc: Vec<i32> = vec![3, 2, 4];
+        let tc_target: i32 = 6;
+        let expected: Vec<i32> = vec![1, 2];
+
+        let answer: Vec<i32> = Solution::two_sum(tc.clone(), tc_target);
+        let answer_2: Vec<i32> = Solution::two_sum_x(tc.clone(), tc_target);
+
+        assert_eq!(answer, expected);
+        assert_eq!(answer_2, expected);
+    }
+
+    #[test]
+    fn test_two_sum_6_x() {
+        let tc: Vec<i32> = vec![3, 3];
+        let tc_target: i32 = 6;
+        let expected: Vec<i32> = vec![0, 1];
+
+        let answer: Vec<i32> = Solution::two_sum(tc.clone(), tc_target);
+        let answer_2: Vec<i32> = Solution::two_sum_x(tc.clone(), tc_target);
+
+        assert_eq!(answer, expected);
+        assert_eq!(answer_2, expected);
+    }
+
+    #[test]
+    fn test_two_sum_not_6() {
+        let tc: Vec<i32> = vec![3, 1];
+        let tc_target: i32 = 6;
+        let not_expected: Vec<i32> = vec![0, 1];
+
+        let answer: Vec<i32> = Solution::two_sum(tc.clone(), tc_target);
+        let answer_2: Vec<i32> = Solution::two_sum_x(tc.clone(), tc_target);
+
+        assert_ne!(answer, not_expected);
+        assert_ne!(answer_2, not_expected);
+    }
+}

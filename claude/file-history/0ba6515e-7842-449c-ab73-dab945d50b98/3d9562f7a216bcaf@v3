@@ -1,0 +1,90 @@
+#![allow(dead_code)]
+struct Solution;
+
+impl Solution {
+    pub fn longest_palindrome(s: String) -> String {
+        if s.is_empty() {
+            return String::new();
+        }
+
+        let bytes: &[u8] = s.as_bytes();
+        let mut s_byte: usize = 0;
+        let mut e_byte: usize = 0;
+
+        for i in 0..bytes.len() {
+            if bytes.len() - i <= e_byte / 2 {
+                break;
+            }
+
+            let first: usize = expand(bytes, i, i);
+            let second: usize = expand(bytes, i, i + 1);
+            let cp: usize = first.max(second);
+
+            if cp > e_byte {
+                e_byte = cp;
+                s_byte = i - (cp - 1) / 2;
+            }
+        }
+
+        s[s_byte..e_byte].to_string()
+    }
+}
+
+fn expand(chars: &[u8], mut l: usize, mut r: usize) -> usize {
+    while l > 0 && r < chars.len() - 1 && chars[l - 1] == chars[r + 1] {
+        l -= 1;
+        r += 1;
+    }
+
+    r - l + 1
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_three_values() {
+        let input: String = "babad".to_string();
+        let expected: String = "bab".to_string();
+        let answer: String = Solution::longest_palindrome(input);
+
+        assert_eq!(expected, answer);
+    }
+
+    #[test]
+    fn test_four_values() {
+        let input: String = "cbbd".to_string();
+        let expected: String = "bb".to_string();
+        let answer: String = Solution::longest_palindrome(input);
+
+        assert_eq!(expected, answer);
+    }
+
+    #[test]
+    fn test_no_values() {
+        let input: String = "".to_string();
+        let expected: String = "".to_string();
+        let answer: String = Solution::longest_palindrome(input);
+
+        assert_eq!(expected, answer);
+    }
+
+    #[test]
+    fn test_single_character() {
+        let input: String = "a".to_string();
+        let expected: String = "a".to_string();
+        let answer: String = Solution::longest_palindrome(input);
+
+        assert_eq!(expected, answer);
+    }
+
+    #[test]
+    fn test_two_characters() {
+        let input: String = "aa".to_string();
+        let expected: String = "aa".to_string();
+        let answer: String = Solution::longest_palindrome(input);
+
+        assert_eq!(expected, answer);
+    }
+}

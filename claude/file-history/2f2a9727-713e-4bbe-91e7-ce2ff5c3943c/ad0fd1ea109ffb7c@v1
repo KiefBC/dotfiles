@@ -1,0 +1,19 @@
+impl Solution {
+    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {}
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_two_sum() {
+        let tc: [i32; 4] = [2, 7, 11, 15];
+        let tc_target: i32 = 9;
+        let expected: [i32; 2] = [0, 1];
+
+        let answer: Vec<i32> = two_sum(tc, tc_target);
+
+        assert_eq!(answer, expected);
+    }
+}

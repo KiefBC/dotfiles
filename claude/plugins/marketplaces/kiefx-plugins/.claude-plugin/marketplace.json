@@ -1,0 +1,13 @@
+{
+  "name": "kiefx-plugins",
+  "owner": {
+    "name": "kiefx"
+  },
+  "plugins": [
+    {
+      "name": "daddy-claude",
+      "source": "./daddy-claude",
+      "description": "My first test plugin"
+    }
+  ]
+}

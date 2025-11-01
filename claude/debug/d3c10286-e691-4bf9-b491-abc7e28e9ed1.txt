@@ -1,0 +1,3 @@
+[DEBUG] [Query.streamInput] Starting to process input stream
+[DEBUG] [Query.streamInput] this.sdkMcpTransports.size = 1
+[DEBUG] [Query.streamInput] Processing message 1: user

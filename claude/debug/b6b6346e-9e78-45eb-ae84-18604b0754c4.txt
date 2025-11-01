@@ -1,0 +1,384 @@
+[ERROR] SyntaxError: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:63:708
+    at Q (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:8:15070)
+    at L4A (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1373:29365)
+    at ZW (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1373:25369)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1466
+    at Array.flatMap (<anonymous>)
+    at nn5 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1453)
+    at gm (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1601)
+    at M0 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1533)
+[DEBUG] Watching for changes in setting files /Users/kiefer/.claude/settings.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kiefer/.claude/skills, project=/Users/kiefer/.claude/plugins/marketplaces/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/kiefer/.zshrc
+[DEBUG] Snapshots directory: /Users/kiefer/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/kiefer/.claude/shell-snapshots/snapshot-zsh-1762017465120-b7wngc.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/kiefer/.claude/todos/b6b6346e-9e78-45eb-ae84-18604b0754c4-agent-b6b6346e-9e78-45eb-ae84-18604b0754c4.json.tmp.46113.1762017465121
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/kiefer/.claude/todos/b6b6346e-9e78-45eb-ae84-18604b0754c4-agent-b6b6346e-9e78-45eb-ae84-18604b0754c4.json.tmp.46113.1762017465121 to /Users/kiefer/.claude/todos/b6b6346e-9e78-45eb-ae84-18604b0754c4-agent-b6b6346e-9e78-45eb-ae84-18604b0754c4.json
+[DEBUG] File /Users/kiefer/.claude/todos/b6b6346e-9e78-45eb-ae84-18604b0754c4-agent-b6b6346e-9e78-45eb-ae84-18604b0754c4.json written atomically
+[DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017465199
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 64711 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017465199 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017465205
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 64711 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017465205 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017465211
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 64711 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017465211 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/arm64-darwin/rg)
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017465713
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 64711 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017465713 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017465797
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 64606 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017465797 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017465803
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 64606 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017465803 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017465808
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65053 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017465808 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] performStartupChecks called
+[DEBUG] Trust not accepted for current directory - skipping plugin installations
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017465823
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65053 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017465823 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017465828
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65158 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017465828 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+[DEBUG] Shell snapshot created successfully (172644 bytes)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[ERROR] ConfigParseError: ConfigParseError: Invalid schema: name: Marketplace name cannot contain spaces. Use kebab-case (e.g., "my-marketplace")
+    at TGQ (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:842)
+    at Kj1 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:2390)
+    at on (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1337:385)
+    at H (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3199:6682)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3199:7123
+    at MJ (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:21528)
+    at EE (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:41111)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:39302
+    at V31 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:70:5038)
+    at Immediate.Z31 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:70:5457)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] FileHistory: Added snapshot for 0686dd7f-81a2-4fed-9e1e-2a607dc4b61e, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/plugin</command-name>
+            <command-message>plugin</command-message>
+         ...
+[DEBUG] UserCommandMessage rendering: "plugin" (args: "marketplace add ./kiefx-plugins")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017483076
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65158 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017483076 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[ERROR] ConfigParseError: ConfigParseError: Invalid schema: name: Marketplace name cannot contain spaces. Use kebab-case (e.g., "my-marketplace")
+    at TGQ (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:842)
+    at Kj1 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:2390)
+    at on (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1337:385)
+    at H (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3199:6682)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3199:7123
+    at MJ (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:21528)
+    at EE (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:41111)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:39302
+    at V31 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:70:5038)
+    at Immediate.Z31 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:70:5457)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] FileHistory: Making snapshot for message 464c25bf-a309-463c-8957-74b7581b2179
+[DEBUG] FileHistory: Added snapshot for 464c25bf-a309-463c-8957-74b7581b2179, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/plugin</command-name>
+            <command-message>plugin</command-message>
+         ...
+[DEBUG] UserCommandMessage rendering: "plugin" (args: "marketplace add ./kiefx-plugins")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017508928
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65158 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017508928 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[ERROR] ConfigParseError: ConfigParseError: Invalid schema: name: Marketplace name cannot contain spaces. Use kebab-case (e.g., "my-marketplace")
+    at TGQ (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:842)
+    at Kj1 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:2390)
+    at on (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1337:385)
+    at H (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3199:6682)
+    at y (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1546:7)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1546:884
+    at $A (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1548:324)
+    at onInput (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1548:7157)
+    at wrappedOnInput (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1548:4571)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:196:499
+[ERROR] Error: Error: Failed to clone marketplace repository: Cloning into '/Users/kiefer/.claude/plugins/marketplaces/".-kiefx-plugins"'...
+fatal: remote error: 
+ "./kiefx-plugins" is not a valid repository name
+Visit https://support.github.com/ for help
+    at HVA (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1329:146)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Kj1 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:1294)
+    at async on (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1337:379)
+    at async H (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3199:6676)
+[INFO] SSH clone failed for "./kiefx-plugins" despite SSH being configured, falling back to HTTPS
+[ERROR] Error: Error: Failed to clone marketplace repository: Cloning into '/Users/kiefer/.claude/plugins/marketplaces/".-kiefx-plugins"'...
+remote: Repository not found.
+fatal: repository 'https://github.com/"./kiefx-plugins".git/' not found
+    at HVA (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1329:146)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Kj1 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:1589)
+    at async on (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1337:379)
+    at async H (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3199:6676)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017553670
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65158 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017553670 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] FileHistory: Making snapshot for message 5a746c03-5271-4e84-9288-399c4e360228
+[DEBUG] FileHistory: Added snapshot for 5a746c03-5271-4e84-9288-399c4e360228, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/plugin</command-name>
+            <command-message>plugin</command-message>
+         ...
+[DEBUG] UserCommandMessage rendering: "plugin" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017554760
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65158 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017554760 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[ERROR] Error: Error: Failed to clone marketplace repository: Cloning into '/Users/kiefer/.claude/plugins/marketplaces/".-kiefx-plugins"'...
+fatal: remote error: 
+ "./kiefx-plugins" is not a valid repository name
+Visit https://support.github.com/ for help
+    at HVA (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1329:146)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Kj1 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:1294)
+    at async on (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1337:379)
+    at async H (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3199:6676)
+[INFO] SSH clone failed for "./kiefx-plugins" despite SSH being configured, falling back to HTTPS
+[ERROR] Error: Error: Failed to clone marketplace repository: Cloning into '/Users/kiefer/.claude/plugins/marketplaces/".-kiefx-plugins"'...
+remote: Repository not found.
+fatal: repository 'https://github.com/"./kiefx-plugins".git/' not found
+    at HVA (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1329:146)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Kj1 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1335:1589)
+    at async on (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1337:379)
+    at async H (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3199:6676)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] FileHistory: Making snapshot for message 5f53069a-96ad-4431-bbed-0d622d41833b
+[DEBUG] FileHistory: Added snapshot for 5f53069a-96ad-4431-bbed-0d622d41833b, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/plugin</command-name>
+            <command-message>plugin</command-message>
+         ...
+[DEBUG] UserCommandMessage rendering: "plugin" (args: "marketplace add "./kiefx-plugins"")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017565765
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65158 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017565765 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] installed_plugins.json doesn't exist yet at /Users/kiefer/.claude/plugins/installed_plugins.json, returning empty object
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] FileHistory: Making snapshot for message d1d0f215-ba1a-4933-884f-9cbaf7926d1d
+[DEBUG] FileHistory: Added snapshot for d1d0f215-ba1a-4933-884f-9cbaf7926d1d, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/plugin</command-name>
+            <command-message>plugin</command-message>
+         ...
+[DEBUG] UserCommandMessage rendering: "plugin" (args: "install kiefx-plugins@kiefx-plugins")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017593470
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65158 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017593470 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 5e6a3027-5c6e-44ec-be6d-c9e3c95e4c5a
+[DEBUG] FileHistory: Added snapshot for 5e6a3027-5c6e-44ec-be6d-c9e3c95e4c5a, tracking 0 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] No hook environment files found
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Permission suggestions for Edit: [
+  {
+    "type": "setMode",
+    "mode": "acceptEdits",
+    "destination": "session"
+  }
+]
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017657643
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65158 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017657643 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/kiefer/.claude/shell-snapshots/snapshot-zsh-1762017465120-b7wngc.sh
+[DEBUG] LSP server manager shut down successfully
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.46113.1762017659846
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65595 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.46113.1762017659846 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically

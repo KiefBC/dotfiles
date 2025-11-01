@@ -1,0 +1,248 @@
+[ERROR] SyntaxError: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:63:708
+    at Q (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:8:15070)
+    at L4A (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:1373:29365)
+    at ZW (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:1373:25369)
+    at file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:3600:1466
+    at Array.flatMap (<anonymous>)
+    at nn5 (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:3600:1453)
+    at gm (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:3600:1601)
+    at M0 (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:3600:1533)
+[DEBUG] Watching for changes in setting files /Users/kiefer/.claude/settings.json...
+[DEBUG] Loading plugin daddy-claude from source: "./daddy-claude"
+[ERROR] Failed to load hooks for daddy-claude: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "hooks"
+    ],
+    "message": "Required"
+  }
+]
+[ERROR] ZodError: ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "hooks"
+    ],
+    "message": "Required"
+  }
+]
+    at get error (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:64:33605)
+    at CZ.parse (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:64:26874)
+    at SGQ (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:1345:278)
+    at _GQ (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:1345:2702)
+    at Ra8 (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:1345:5642)
+    at Oa8 (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:1345:4394)
+    at async file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:1345:11803
+[DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+[DEBUG] Plugin not available for MCP: daddy-claude@kiefx-plugins - error type: hook-load-failed
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kiefer/.claude/skills, project=/Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/daddy-claude/hooks/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/kiefer/.zshrc
+[DEBUG] Snapshots directory: /Users/kiefer/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/kiefer/.claude/shell-snapshots/snapshot-zsh-1762020084019-19kbyx.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/kiefer/.claude/todos/7adb13e4-507a-4182-804a-1017fda1b84b-agent-7adb13e4-507a-4182-804a-1017fda1b84b.json.tmp.76233.1762020084020
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/kiefer/.claude/todos/7adb13e4-507a-4182-804a-1017fda1b84b-agent-7adb13e4-507a-4182-804a-1017fda1b84b.json.tmp.76233.1762020084020 to /Users/kiefer/.claude/todos/7adb13e4-507a-4182-804a-1017fda1b84b-agent-7adb13e4-507a-4182-804a-1017fda1b84b.json
+[DEBUG] File /Users/kiefer/.claude/todos/7adb13e4-507a-4182-804a-1017fda1b84b-agent-7adb13e4-507a-4182-804a-1017fda1b84b.json written atomically
+[DEBUG] Plugin loading errors: Hook load failed: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "hooks"
+    ],
+    "message": "Required"
+  }
+]
+[DEBUG] getPluginSkills: Processing 1 enabled plugins
+[DEBUG] Checking plugin daddy-claude: skillsPath=exists, skillsPaths=0 paths
+[DEBUG] Attempting to load skills from plugin daddy-claude default skillsPath: /Users/kiefer/.claude/plugins/marketplaces/kiefx-plugins/daddy-claude/skills
+[DEBUG] Plugin loading errors: Hook load failed: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "hooks"
+    ],
+    "message": "Required"
+  }
+]
+[DEBUG] Registered 0 hooks from 1 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] Loaded 1 skills from plugin daddy-claude default directory
+[DEBUG] Total plugin skills loaded: 1
+[DEBUG] Loaded 2 commands from plugin daddy-claude default directory
+[DEBUG] Total plugin commands loaded: 2
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 1 plugin skills
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020084126
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65648 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020084126 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020084136
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65648 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020084136 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020084148
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65648 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020084148 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/arm64-darwin/rg)
+[DEBUG] Plugin loading errors: Hook load failed: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "hooks"
+    ],
+    "message": "Required"
+  }
+]
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Shell snapshot created successfully (172678 bytes)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020084753
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65648 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020084753 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020084836
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65543 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020084836 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020084842
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65543 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020084842 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020084849
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 66023 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020084849 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-local, using native: false
+[DEBUG] performStartupChecks called
+[DEBUG] Trust not accepted for current directory - skipping plugin installations
+[DEBUG] Plugin not available for MCP: daddy-claude@kiefx-plugins - error type: hook-load-failed
+[DEBUG] Plugin not available for MCP: daddy-claude@kiefx-plugins - error type: hook-load-failed
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020084863
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 66023 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020084863 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020084869
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 66128 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020084869 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Loaded plugins - Enabled: 1, Disabled: 0, Commands: 2, Agents: 0, Errors: 1
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for 279162bf-6af1-4cdf-b8c8-494e27cf00b2, tracking 0 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] No hook environment files found
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020107057
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 66128 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020107057 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Streaming aborted by user: Request was aborted.
+[ERROR] Error in non-streaming fallback: Request was aborted.
+[ERROR] Error: Error: Request was aborted.
+    at vl._createMessage (file:///Users/kiefer/.claude/local/node_modules/@anthropic-ai/claude-code/cli.js:209:4515)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020107078
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 66128 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020107078 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/kiefer/.claude/shell-snapshots/snapshot-zsh-1762020084019-19kbyx.sh
+[DEBUG] LSP server manager shut down successfully
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.76233.1762020108629
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 66575 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.76233.1762020108629 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically

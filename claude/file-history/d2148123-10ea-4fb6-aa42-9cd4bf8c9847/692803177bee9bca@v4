@@ -1,0 +1,57 @@
+#![allow(dead_code)]
+
+use std::{collections::HashMap, ops::Index};
+struct Solution;
+
+impl Solution {
+    pub fn longest_common_prefix(strs: Vec<String>) -> String {
+        if strs.is_empty() {
+            return String::new();
+        }
+
+        // TODO(human): Implement the prefix comparison logic here
+        // Hint: You need to:
+        // 1. Use the first string as a reference
+        // 2. Iterate through each character position (index)
+        // 3. For each position, check if ALL strings have the same character at that index
+        // 4. Stop when you find a mismatch or reach the end of any string
+        // 5. Return the substring from the first string up to where you stopped
+        //
+        // Consider: What happens if one string is shorter than others?
+        // Consider: How do you check if all strings have the same character at position i?
+        let amount: usize = strs
+            .iter()
+            .min_by_key(|s| s.len())
+            .unwrap_or(&String::new())
+            .len();
+
+        for i in 0..amount {
+            if strs
+                .iter()
+                .peekable()
+                .next_if_eq(strs.get((i + 1)).unwrap_or(&String::new()))
+            {
+                println!("EQUAL");
+            }
+        }
+
+        String::new() // Replace this with your implementation
+    }
+}
+
+#[cfg(test)]
+pub mod tests {
+    use super::*;
+
+    #[test]
+    fn test_hello() {
+        let input: Vec<String> = vec![
+            "flower".to_string(),
+            "flow".to_string(),
+            "flight".to_string(),
+        ];
+        let expected: String = "fl".to_string();
+        let answer: String = Solution::longest_common_prefix(input);
+        assert_eq!(expected, answer);
+    }
+}

@@ -1,0 +1,330 @@
+[DEBUG] Watching for changes in setting files /Users/kiefer/.claude/settings.json, /Users/kiefer/github/leetcode/rust_problems/.claude/settings.local.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kiefer/.claude/skills, project=/Users/kiefer/github/leetcode/rust_problems/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/kiefer/.zshrc
+[DEBUG] Snapshots directory: /Users/kiefer/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/kiefer/.claude/shell-snapshots/snapshot-zsh-1761959295991-ntwnf9.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/kiefer/.claude/todos/c457985e-8ac1-4a30-94dc-5036393f9118-agent-c457985e-8ac1-4a30-94dc-5036393f9118.json.tmp.93201.1761959295992
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/kiefer/.claude/todos/c457985e-8ac1-4a30-94dc-5036393f9118-agent-c457985e-8ac1-4a30-94dc-5036393f9118.json.tmp.93201.1761959295992 to /Users/kiefer/.claude/todos/c457985e-8ac1-4a30-94dc-5036393f9118-agent-c457985e-8ac1-4a30-94dc-5036393f9118.json
+[DEBUG] File /Users/kiefer/.claude/todos/c457985e-8ac1-4a30-94dc-5036393f9118-agent-c457985e-8ac1-4a30-94dc-5036393f9118.json written atomically
+[DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+[DEBUG] Summarizing all 2 messages (~1412 tokens)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959296316
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760667 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959296316 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959296636
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760667 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959296636 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Stream started - received first chunk
+[DEBUG] Summarizing last 3 of 157 messages (~113809 tokens)
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/arm64-darwin/rg)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959296940
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760667 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959296940 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Shell snapshot created successfully (172879 bytes)
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] MCP server "context7": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "dash-api": Starting connection with timeout of 30000ms
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959297989
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760667 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959297989 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959298537
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760562 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959298537 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959298814
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760562 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959298814 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] performStartupChecks called
+[DEBUG] Trust not accepted for current directory - skipping plugin installations
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959299342
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760667 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959299342 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[ERROR] MCP server "context7" Server stderr: Context7 Documentation MCP Server running on stdio
+[DEBUG] MCP server "ide": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "dash-api": Successfully connected to stdio server in 2164ms
+[DEBUG] MCP server "dash-api": Connection established with capabilities: {"hasTools":true,"hasPrompts":true,"hasResources":true,"serverVersion":{"name":"Dash Documentation API","version":"1.20.0"}}
+[DEBUG] MCP server "context7": Successfully connected to stdio server in 2245ms
+[DEBUG] MCP server "context7": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Context7","version":"1.0.26"}}
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] MCP server "dash-api" Server stderr: Processing request of type ListToolsRequest
+Processing request of type ListPromptsRequest
+Processing request of type ListResourcesRequest
+[DEBUG] Summarizing all 2 messages (~1683 tokens)
+[DEBUG] MCP server "ide": Successfully connected to ws-ide server in 116ms
+[DEBUG] MCP server "ide": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Claude Code JetBrains Plugin","version":"0.1.12-beta"}}
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Summarizing last 5 of 74 messages (~149198 tokens)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Summarizing all 2 messages (~1936 tokens)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959301824
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760667 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959301824 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Stream started - received first chunk
+[DEBUG] Summarizing last 8 of 49 messages (~127614 tokens)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959309578
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760667 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959309578 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] FileHistory: Added snapshot for 87686e27-f9c9-47eb-9ed4-38e7e666c758, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/ide</command-name>
+            <command-message>ide</command-message>
+            <co...
+[DEBUG] UserCommandMessage rendering: "ide" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959310683
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760667 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959310683 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959311098
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760749 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959311098 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959312229
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760749 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959312229 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message e9d5d289-f0c4-4c6c-90dd-866169d01d75
+[DEBUG] FileHistory: Added snapshot for e9d5d289-f0c4-4c6c-90dd-866169d01d75, tracking 0 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' failed after 0s: MCP error -32603: Tool not found: closeAllDiffTabs
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 348ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 339ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959349001
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760749 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959349001 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959349355
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760749 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959349355 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959349774
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760860 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959349774 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 336ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message ae82ab28-3bf3-4df8-a49c-ab2e930a14e0
+[DEBUG] FileHistory: Added snapshot for ae82ab28-3bf3-4df8-a49c-ab2e930a14e0, tracking 0 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' failed after 0s: MCP error -32603: Tool not found: closeAllDiffTabs
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959638306
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760860 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959638306 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959648594
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760860 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959648594 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959648935
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760860 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959648935 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761959649347
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760958 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761959649347 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761961438212
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760958 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761961438212 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761963238072
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760958 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761963238072 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761965038078
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760958 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761965038078 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761966838147
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760958 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761966838147 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761968638174
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760958 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761968638174 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761970438115
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760958 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761970438115 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.93201.1761972240246
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 54760958 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.93201.1761972240246 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically

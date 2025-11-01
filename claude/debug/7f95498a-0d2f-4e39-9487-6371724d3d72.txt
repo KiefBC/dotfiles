@@ -1,0 +1,49 @@
+[ERROR] SyntaxError: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:63:708
+    at Q (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:8:15070)
+    at L4A (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1373:29365)
+    at ZW (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1373:25369)
+    at file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1466
+    at Array.flatMap (<anonymous>)
+    at nn5 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1453)
+    at gm (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1601)
+    at M0 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:3600:1533)
+[DEBUG] Watching for changes in setting files /Users/kiefer/.claude/settings.json...
+[DEBUG] Loading plugin daddy-claude from source: "./daddy-claude"
+[ERROR] Failed to load hooks for daddy-claude: Unexpected end of JSON input
+[ERROR] SyntaxError: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at SGQ (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:258)
+    at _GQ (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:2702)
+    at Ra8 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:5642)
+    at Oa8 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:4394)
+    at async file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1345:11803
+    at async fg2 (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:2999:28000)
+    at async Object.Q [as initialize] (file:///Users/kiefer/.nvm/versions/node/v24.4.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:2999:28650)
+[DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.68200.1762019498493
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65253 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.68200.1762019498493 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.68200.1762019498499
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65253 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.68200.1762019498499 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/kiefer/.claude.json.tmp.68200.1762019502734
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65252 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/kiefer/.claude.json.tmp.68200.1762019502734 to /Users/kiefer/.claude.json
+[DEBUG] File /Users/kiefer/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] LSP server manager shut down successfully

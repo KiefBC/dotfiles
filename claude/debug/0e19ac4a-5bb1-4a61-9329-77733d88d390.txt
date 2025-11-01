@@ -1,0 +1,32 @@
+[DEBUG] [Query.streamInput] Starting to process input stream
+[DEBUG] [Query.streamInput] this.sdkMcpTransports.size = 1
+[DEBUG] [Query.streamInput] Processing message 1: user
+[DEBUG] [Query.streamInput] Processing message 2: user
+[DEBUG] [Query.streamInput] Processing message 3: user
+[DEBUG] [Query.streamInput] Processing message 4: user
+[DEBUG] [Query.streamInput] Processing message 5: user
+[DEBUG] [Query.streamInput] Processing message 6: user
+[DEBUG] [Query.streamInput] Processing message 7: user
+[DEBUG] [Query.streamInput] Processing message 8: user
+[DEBUG] [Query.streamInput] Processing message 9: user
+[DEBUG] [Query.streamInput] Processing message 10: user
+[DEBUG] [Query.streamInput] Processing message 11: user
+[DEBUG] [Query.streamInput] Processing message 12: user
+[DEBUG] [Query.streamInput] Processing message 13: user
+[DEBUG] [Query.streamInput] Processing message 14: user
+[DEBUG] [Query.streamInput] Processing message 15: user
+[DEBUG] [Query.streamInput] Processing message 16: user
+[DEBUG] [Query.streamInput] Processing message 17: user
+[DEBUG] [Query.streamInput] Processing message 18: user
+[DEBUG] [Query.streamInput] Processing message 19: user
+[DEBUG] [Query.streamInput] Processing message 20: user
+[DEBUG] [Query.streamInput] Processing message 21: user
+[DEBUG] [Query.streamInput] Processing message 22: user
+[DEBUG] [Query.streamInput] Processing message 23: user
+[DEBUG] [Query.streamInput] Processing message 24: user
+[DEBUG] [Query.streamInput] Processing message 25: user
+[DEBUG] [Query.streamInput] Processing message 26: user
+[DEBUG] [Query.streamInput] Processing message 27: user
+[DEBUG] [Query.streamInput] Processing message 28: user
+[DEBUG] [Query.streamInput] Processing message 29: user
+[DEBUG] [Query.streamInput] Processing message 30: user

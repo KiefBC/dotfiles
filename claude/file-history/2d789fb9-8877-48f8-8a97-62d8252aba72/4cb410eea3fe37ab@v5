@@ -1,0 +1,76 @@
+#![allow(dead_code)]
+// Definition for singly-linked list.
+#[derive(PartialEq, Eq, Clone, Debug)]
+pub struct ListNode {
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
+}
+
+impl ListNode {
+    #[inline]
+    fn new(val: i32) -> Self {
+        ListNode { next: None, val }
+    }
+}
+
+struct Solution;
+
+impl Solution {
+    pub fn remove_nth_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
+        let mut dummy = Box::new(ListNode { val: 0, next: head });
+
+        let mut linked_len = 0;
+        let mut curr_node = &dummy.next;
+        while let Some(node) = curr_node {
+            linked_len += 1;
+            curr_node = &node.next;
+        }
+
+        // we need to stop at position (length - n) from the beginning
+        let steps_to_target = linked_len - n;
+
+        let mut curr = &mut dummy;
+        for _ in 0..steps_to_target {
+            curr = curr.next.as_mut().unwrap();
+        }
+        curr.next = curr.next.as_mut()?.next.take();
+
+        dummy.next
+    }
+}
+
+#[cfg(test)]
+pub mod tests {
+    use super::*;
+
+    #[test]
+    fn test_list_one() {
+        let head = Some(Box::new(ListNode {
+            val: 1,
+            next: Some(Box::new(ListNode {
+                val: 2,
+                next: Some(Box::new(ListNode {
+                    val: 3,
+                    next: Some(Box::new(ListNode {
+                        val: 4,
+                        next: Some(Box::new(ListNode { val: 5, next: None })),
+                    })),
+                })),
+            })),
+        }));
+
+        let expected = Some(Box::new(ListNode {
+            val: 1,
+            next: Some(Box::new(ListNode {
+                val: 2,
+                next: Some(Box::new(ListNode {
+                    val: 3,
+                    next: Some(Box::new(ListNode { val: 5, next: None })),
+                })),
+            })),
+        }));
+
+        let answer = Solution::remove_nth_from_end(head, 2);
+        assert_eq!(expected, answer);
+    }
+}
