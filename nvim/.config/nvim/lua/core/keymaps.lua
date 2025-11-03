@@ -307,7 +307,7 @@ keymap.set('n', '<leader>aa', function()
 end, { desc = 'Sidekick Toggle CLI' })
 
 keymap.set('n', '<leader>ap', function()
-  require('sidekick.cli').select_prompt()
+  require('sidekick.cli').prompt()
 end, { desc = 'Sidekick Prompt Picker' })
 
 -- ===================================================================
