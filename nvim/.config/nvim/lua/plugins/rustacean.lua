@@ -1,27 +1,52 @@
 return {
   {
-    -- INFO: Do not add this to MAson or LSP Config
+    -- INFO: Do not add this to Mason or LSP Config
     -- Rustacean does all of this for us.
     -- https://github.com/mrcjkb/rustaceanvim
     'mrcjkb/rustaceanvim',
-    depdencies = {
-      'adaszko/tree_climber_rust.nvim',
-    },
     version = '^5',
     lazy = false,
-    ['rust-analyzer'] = {
-      cargo = {
-        allFeatures = true,
-      },
+    ft = { 'rust' },
+    dependencies = {
+      'adaszko/tree_climber_rust.nvim',
     },
-    server = {
-      on_attach = function(client, bufnr)
-        local opts = { noremap = true, silent = true }
-        vim.api.nvim_buf_set_keymap(bufnr, 'n', 's', '<cmd>lua require("tree_climber_rust").init_selection()<CR>', opts)
-        vim.api.nvim_buf_set_keymap(bufnr, 'x', 's', '<cmd>lua require("tree_climber_rust").select_incremental()<CR>', opts)
-        vim.api.nvim_buf_set_keymap(bufnr, 'x', 'S', '<cmd>lua require("tree_climber_rust").select_previous()<CR>', opts)
-      end,
-    },
+    config = function()
+      vim.g.rustaceanvim = {
+        server = {
+          on_attach = function(client, bufnr)
+            -- Tree climber keybindings for Rust
+            local opts = { noremap = true, silent = true, buffer = bufnr }
+            vim.keymap.set('n', 's', '<cmd>lua require("tree_climber_rust").init_selection()<CR>', opts)
+            vim.keymap.set('x', 's', '<cmd>lua require("tree_climber_rust").select_incremental()<CR>', opts)
+            vim.keymap.set('x', 'S', '<cmd>lua require("tree_climber_rust").select_previous()<CR>', opts)
+
+            -- Use standard LSP code action with Telescope picker (same as other languages)
+            vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { silent = true, buffer = bufnr, desc = '[C]ode [A]ction' })
+            vim.keymap.set('x', '<leader>ca', vim.lsp.buf.code_action, { silent = true, buffer = bufnr, desc = '[C]ode [A]ction' })
+
+            -- Additional Rust-specific actions
+            vim.keymap.set('n', '<leader>cr', function()
+              vim.cmd.RustLsp 'runnables'
+            end, { silent = true, buffer = bufnr, desc = '[C]ode [R]unnables' })
+
+            vim.keymap.set('n', '<leader>ce', function()
+              vim.cmd.RustLsp 'explainError'
+            end, { silent = true, buffer = bufnr, desc = '[C]ode [E]xplain Error' })
+
+            vim.keymap.set('n', '<leader>cm', function()
+              vim.cmd.RustLsp 'expandMacro'
+            end, { silent = true, buffer = bufnr, desc = '[C]ode Expand [M]acro' })
+          end,
+          default_settings = {
+            ['rust-analyzer'] = {
+              cargo = {
+                allFeatures = true,
+              },
+            },
+          },
+        },
+      }
+    end,
   },
   {
     -- INFO: This is for managing our Rust crates
