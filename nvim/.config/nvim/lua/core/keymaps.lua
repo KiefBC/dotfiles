@@ -60,78 +60,36 @@ keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window'
 -- FILE EXPLORER (Neo-tree)
 -- ===================================================================
 
-keymap.set('n', '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal', silent = true })
-keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', { desc = '[E]xplorer' })
+-- keymap.set('n', '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal', silent = true })
+-- keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', { desc = '[E]xplorer' })
 
 -- ===================================================================
--- FUZZY FINDING (fzf-lua)
+-- FUZZY FINDING (Picker from Snacks)
 -- ===================================================================
 
-keymap.set('n', '<leader>sf', function()
-  require('fzf-lua').files { cwd = vim.uv.cwd() }
-end, { desc = '[S]earch [F]iles' })
-
-keymap.set('n', '<leader>sb', function()
-  require('fzf-lua').buffers {}
-end, { desc = '[S]earch [B]uffers' })
-
-keymap.set('n', '<leader>sg', function()
-  require('fzf-lua').live_grep {}
-end, { desc = '[S]earch [G]rep' })
-
--- ===================================================================
--- FUZZY FINDING (Telescope)
--- ===================================================================
-
-keymap.set('n', '<leader>sh', function()
-  require('telescope.builtin').help_tags()
-end, { desc = '[S]earch [H]elp' })
-
-keymap.set('n', '<leader>sk', function()
-  require('telescope.builtin').keymaps()
-end, { desc = '[S]earch [K]eymaps' })
-
-keymap.set('n', '<leader>ss', function()
-  require('telescope.builtin').builtin()
-end, { desc = '[S]earch [S]elect Telescope' })
-
-keymap.set('n', '<leader>sw', function()
-  require('telescope.builtin').grep_string()
-end, { desc = '[S]earch current [W]ord' })
-
-keymap.set('n', '<leader>sd', function()
-  require('telescope.builtin').diagnostics()
-end, { desc = '[S]earch [D]iagnostics' })
-
-keymap.set('n', '<leader>sr', function()
-  require('telescope.builtin').resume()
-end, { desc = '[S]earch [R]esume' })
-
-keymap.set('n', '<leader>s.', function()
-  require('telescope.builtin').oldfiles()
-end, { desc = '[S]earch Recent Files ("." for repeat)' })
+keymap.set('n', '<leader>sS', function()
+  require('snacks').picker.smart()
+end, { desc = '[S]mart Search' })
 
 keymap.set('n', '<leader><leader>', function()
-  require('telescope.builtin').buffers()
-end, { desc = '[ ] Find existing buffers' })
+  require('snacks').picker.buffers()
+end, { desc = 'Search Buffers' })
+
+keymap.set('n', '<leader>sf', function()
+  require('snacks').picker.files { cwd = vim.uv.cwd() }
+end, { desc = 'Search [F]iles' })
+
+keymap.set('n', '<leader>sb', function()
+  require('snacks').picker.grep_buffers()
+end, { desc = 'Grep [B]uffers' })
+
+keymap.set('n', '<leader>sg', function()
+  require('snacks').picker.grep()
+end, { desc = '[G]rep Files' })
 
 keymap.set('n', '<leader>/', function()
-  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
-end, { desc = '[/] Fuzzily search in current buffer' })
-
-keymap.set('n', '<leader>s/', function()
-  require('telescope.builtin').live_grep {
-    grep_open_files = true,
-    prompt_title = 'Live Grep in Open Files',
-  }
-end, { desc = '[S]earch [/] in Open Files' })
-
-keymap.set('n', '<leader>sn', function()
-  require('telescope.builtin').find_files { cwd = vim.fn.stdpath 'config' }
-end, { desc = '[S]earch [N]eovim files' })
+  require('snacks').picker.lines()
+end, { desc = '[/] Grep Current Buffer' })
 
 -- ===================================================================
 -- LSP NAVIGATION AND ACTIONS (Telescope)
