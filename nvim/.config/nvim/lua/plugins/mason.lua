@@ -1,47 +1,43 @@
 return {
-  -- Load mason.nvim first
   {
     'williamboman/mason.nvim',
     config = function()
       require('mason').setup {}
     end,
   },
-  -- Then load mason-lspconfig.nvim after mason.nvim
-  {
-    'williamboman/mason-lspconfig.nvim',
-    dependencies = { 'williamboman/mason.nvim' },
-    config = function()
-      require('mason-lspconfig').setup {
-        ensure_installed = {
-          'lua_ls',
-          'bashls',
-          'ts_ls',
-          'svelte',
-          'tailwindcss',
-          'html',
-          'cssls',
-          'emmet_ls',
-          'copilot',
-        },
-      }
-    end,
-  },
-  -- Finally, load mason-tool-installer.nvim after mason.nvim
   {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     dependencies = { 'williamboman/mason.nvim' },
     config = function()
       require('mason-tool-installer').setup {
         ensure_installed = {
+          -- LSP servers
+          'lua-language-server',
+          'bash-language-server',
+          'typescript-language-server',
+          'svelte-language-server',
+          'tailwindcss-language-server',
+          'html-lsp',
+          'css-lsp',
+          'emmet-ls',
+          'json-lsp',
+          'gopls',
+          'ty',
+          -- Formatters
           'stylua',
-          'ruff',
           'prettierd',
+          'prettier',
           'shfmt',
+          'sqls',
+          'goimports',
+          'sql-formatter',
+          -- Linters
+          'ruff',
           'pylint',
           'eslint_d',
-          'codelldb',
           'markdownlint',
-          'prettier',
+          -- DAP
+          'codelldb',
         },
       }
     end,

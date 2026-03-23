@@ -10,7 +10,7 @@ return {
     config = function()
       -- Set up LSP attach autocommand (this part stays the same)
       vim.api.nvim_create_autocmd('LspAttach', {
-        group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
+        group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
         callback = function(event)
           local map = function(keys, func, desc, mode)
             mode = mode or 'n'
@@ -22,7 +22,7 @@ return {
 
           local client = vim.lsp.get_client_by_id(event.data.client_id)
           if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
-            local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
+            local highlight_augroup = vim.api.nvim_create_augroup('lsp-highlight', { clear = false })
             vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
               buffer = event.buf,
               group = highlight_augroup,
@@ -36,10 +36,10 @@ return {
             })
 
             vim.api.nvim_create_autocmd('LspDetach', {
-              group = vim.api.nvim_create_augroup('kickstart-lsp-detach', { clear = true }),
+              group = vim.api.nvim_create_augroup('lsp-detach', { clear = true }),
               callback = function(event2)
                 vim.lsp.buf.clear_references()
-                vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
+                vim.api.nvim_clear_autocmds { group = 'lsp-highlight', buffer = event2.buf }
               end,
             })
           end
@@ -62,8 +62,24 @@ return {
       })
 
       -- Configure LSP servers using vim.lsp.config() for Neovim 0.11+
-      -- Suppress position encoding warnings for undefined symbols
       vim.lsp.set_log_level 'ERROR'
+
+      -- Workaround for Neovim 0.11.6 LSP sync bug (nil prev_line in compute_start_range)
+      -- Forces full document sync instead of incremental to avoid the crash
+      vim.lsp.config('*', {
+        capabilities = {
+          textDocument = {
+            synchronization = {
+              didSave = true,
+              willSave = true,
+              willSaveWaitUntil = true,
+            },
+          },
+        },
+        flags = {
+          allow_incremental_sync = false,
+        },
+      })
 
       -- Lua Language Server
       vim.lsp.config('lua_ls', {
@@ -83,7 +99,10 @@ return {
         cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose', '--completion-style=detailed' },
       })
 
-      -- Ruff for Python
+      -- ty for Python type checking
+      vim.lsp.config('ty', {})
+
+      -- Ruff for Python linting/formatting
       vim.lsp.config('ruff', {
         offset_encoding = 'utf-16',
         init_options = {
@@ -134,6 +153,15 @@ return {
         filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'svelte' },
       })
 
+      -- Go Language Server
+      vim.lsp.config('gopls', {})
+
+      -- SQL Language Server
+      vim.lsp.config('sqls', {
+        filetypes = { 'sql' },
+        root_markers = { '.sqls.yaml', '.git' },
+      })
+
       -- Copilot LSP for Sidekick
       vim.lsp.config('copilot', {
         cmd = { 'copilot-language-server', '--stdio' },
@@ -142,6 +170,7 @@ return {
       -- Enable the LSP servers
       vim.lsp.enable 'lua_ls'
       vim.lsp.enable 'clangd'
+      vim.lsp.enable 'ty'
       vim.lsp.enable 'ruff'
       vim.lsp.enable 'sourcekit'
       vim.lsp.enable 'bashls'
@@ -151,6 +180,8 @@ return {
       vim.lsp.enable 'html'
       vim.lsp.enable 'cssls'
       vim.lsp.enable 'emmet_ls'
+      vim.lsp.enable 'gopls'
+      vim.lsp.enable 'sqls'
       vim.lsp.enable 'copilot'
     end,
   },

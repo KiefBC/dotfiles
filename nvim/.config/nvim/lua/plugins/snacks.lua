@@ -44,7 +44,7 @@ return {
       function()
         Snacks.explorer()
       end,
-      desc = 'EXPLORE TEST',
+      desc = '[E]xplorer',
     },
     {
       '<leader>bd',

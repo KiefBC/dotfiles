@@ -5,7 +5,7 @@
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
   callback = function()
     vim.hl.on_yank()
   end,
@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- This function will be executed to configure the current buffer
 vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
+  group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
   -- Creating a function that lets us more easily define mappings specific for LSP related items
   callback = function(event)
     local map = function(keys, func, desc, mode)

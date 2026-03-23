@@ -22,7 +22,9 @@ return { -- Autoformat
       }
     end,
     formatters_by_ft = {
+      go = { 'goimports' },
       lua = { 'stylua' },
+      sql = { 'sql_formatter' },
       -- Conform can also run multiple formatters sequentially
       -- python = { 'isort', 'black' },
       python = {
@@ -44,7 +46,7 @@ return { -- Autoformat
       markdown = { 'prettier' },
       yaml = { 'prettierd' },
       toml = { 'prettierd' },
-      tyoeScript = { 'prettierd' },
+      typescript = { 'prettierd' },
       typescriptreact = { 'prettierd' },
       javascriptreact = { 'prettierd' },
       --
