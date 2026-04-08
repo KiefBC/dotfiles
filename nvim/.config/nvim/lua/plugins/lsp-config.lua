@@ -61,28 +61,11 @@ return {
         end,
       })
 
-      -- Configure LSP servers using vim.lsp.config() for Neovim 0.11+
-      vim.lsp.set_log_level 'ERROR'
-
-      -- Workaround for Neovim 0.11.6 LSP sync bug (nil prev_line in compute_start_range)
-      -- Forces full document sync instead of incremental to avoid the crash
-      vim.lsp.config('*', {
-        capabilities = {
-          textDocument = {
-            synchronization = {
-              didSave = true,
-              willSave = true,
-              willSaveWaitUntil = true,
-            },
-          },
-        },
-        flags = {
-          allow_incremental_sync = false,
-        },
-      })
+      -- Configure LSP servers using vim.lsp.config[] for Neovim 0.12+
+      vim.lsp.log.set_level 'ERROR'
 
       -- Lua Language Server
-      vim.lsp.config('lua_ls', {
+      vim.lsp.config['lua_ls'] = {
         offset_encoding = 'utf-16',
         settings = {
           Lua = {
@@ -91,19 +74,19 @@ return {
             },
           },
         },
-      })
+      }
 
       -- Clangd for C/C++
-      vim.lsp.config('clangd', {
+      vim.lsp.config['clangd'] = {
         offset_encoding = 'utf-16',
         cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose', '--completion-style=detailed' },
-      })
+      }
 
       -- ty for Python type checking
-      vim.lsp.config('ty', {})
+      vim.lsp.config['ty'] = {}
 
       -- Ruff for Python linting/formatting
-      vim.lsp.config('ruff', {
+      vim.lsp.config['ruff'] = {
         offset_encoding = 'utf-16',
         init_options = {
           settings = {
@@ -120,69 +103,66 @@ return {
             },
           },
         },
-      })
+      }
 
       -- SourceKit LSP for Swift
-      vim.lsp.config('sourcekit', {
+      vim.lsp.config['sourcekit'] = {
         cmd = { 'sourcekit-lsp' },
         root_markers = { 'Package.swift', '.git' },
-      })
+      }
 
       -- Bash Language Server
-      vim.lsp.config('bashls', {})
+      vim.lsp.config['bashls'] = {}
 
       -- TypeScript/JavaScript Language Server
-      vim.lsp.config('ts_ls', {
+      vim.lsp.config['ts_ls'] = {
         offset_encoding = 'utf-16',
-      })
+      }
 
       -- Svelte Language Server
-      vim.lsp.config('svelte', {})
+      vim.lsp.config['svelte'] = {}
 
       -- Tailwind CSS Language Server
-      vim.lsp.config('tailwindcss', {})
+      vim.lsp.config['tailwindcss'] = {}
 
       -- HTML Language Server
-      vim.lsp.config('html', {})
+      vim.lsp.config['html'] = {}
 
       -- CSS Language Server
-      vim.lsp.config('cssls', {})
+      vim.lsp.config['cssls'] = {}
 
       -- Emmet Language Server
-      vim.lsp.config('emmet_ls', {
+      vim.lsp.config['emmet_ls'] = {
         filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'svelte' },
-      })
+      }
 
       -- Go Language Server
-      vim.lsp.config('gopls', {})
+      vim.lsp.config['gopls'] = {}
 
       -- SQL Language Server
-      vim.lsp.config('sqls', {
+      vim.lsp.config['sqls'] = {
         filetypes = { 'sql' },
         root_markers = { '.sqls.yaml', '.git' },
-      })
+      }
 
-      -- Copilot LSP for Sidekick
-      vim.lsp.config('copilot', {
-        cmd = { 'copilot-language-server', '--stdio' },
-      })
-
-      -- Enable the LSP servers
-      vim.lsp.enable 'lua_ls'
-      vim.lsp.enable 'clangd'
-      vim.lsp.enable 'ty'
-      vim.lsp.enable 'ruff'
-      vim.lsp.enable 'sourcekit'
-      vim.lsp.enable 'bashls'
-      vim.lsp.enable 'ts_ls'
-      vim.lsp.enable 'svelte'
-      vim.lsp.enable 'tailwindcss'
-      vim.lsp.enable 'html'
-      vim.lsp.enable 'cssls'
-      vim.lsp.enable 'emmet_ls'
-      vim.lsp.enable 'gopls'
-      vim.lsp.enable 'sqls'
-      vim.lsp.enable 'copilot'
+      -- Enable all configured LSP servers
+      -- Note: Copilot is managed by copilot.lua plugin, not here
+      vim.lsp.enable {
+        'lua_ls',
+        'clangd',
+        'ty',
+        'ruff',
+        'sourcekit',
+        'bashls',
+        'ts_ls',
+        'svelte',
+        'tailwindcss',
+        'html',
+        'cssls',
+        'emmet_ls',
+        'gopls',
+        'sqls',
+      }
     end,
   },
 }

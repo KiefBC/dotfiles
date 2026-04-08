@@ -207,11 +207,11 @@ end
 _G.setup_git_keymaps = setup_git_keymaps
 
 -- ===================================================================
--- CODE COMMENTING (Comment.nvim)
+-- CODE COMMENTING (ts-comments.nvim)
 -- ===================================================================
 
-keymap.set('n', '<Leader>V', '<Plug>(comment_toggle_blockwise_current)', { desc = 'Comment' })
-keymap.set('x', '<Leader>V', '<Plug>(comment_toggle_blockwise_visual)', { desc = 'Comment' })
+keymap.set('n', '<Leader>V', 'gbc', { desc = 'Block comment', remap = true })
+keymap.set('x', '<Leader>V', 'gb', { desc = 'Block comment', remap = true })
 
 -- ===================================================================
 -- CODE FORMATTING (Conform)
@@ -340,17 +340,17 @@ end, { desc = '[U]ndo [N]otifications' })
 
 -- Note: These require treesitter-textobjects to be loaded first
 vim.defer_fn(function()
-  local ts_repeat_move = require 'nvim-treesitter.textobjects.repeatable_move'
+  local ts_repeat_move = require 'nvim-treesitter-textobjects.repeatable_move'
 
   -- Vim way: ; goes to the direction you were moving.
   keymap.set({ 'n', 'x', 'o' }, ';', ts_repeat_move.repeat_last_move)
   keymap.set({ 'n', 'x', 'o' }, ',', ts_repeat_move.repeat_last_move_opposite)
 
   -- Make builtin f, F, t, T also repeatable with ; and ,
-  keymap.set({ 'n', 'x', 'o' }, 'f', ts_repeat_move.builtin_f)
-  keymap.set({ 'n', 'x', 'o' }, 'F', ts_repeat_move.builtin_F)
-  keymap.set({ 'n', 'x', 'o' }, 't', ts_repeat_move.builtin_t)
-  keymap.set({ 'n', 'x', 'o' }, 'T', ts_repeat_move.builtin_T)
+  keymap.set({ 'n', 'x', 'o' }, 'f', ts_repeat_move.builtin_f_expr, { expr = true })
+  keymap.set({ 'n', 'x', 'o' }, 'F', ts_repeat_move.builtin_F_expr, { expr = true })
+  keymap.set({ 'n', 'x', 'o' }, 't', ts_repeat_move.builtin_t_expr, { expr = true })
+  keymap.set({ 'n', 'x', 'o' }, 'T', ts_repeat_move.builtin_T_expr, { expr = true })
 end, 100)
 
 vim.keymap.set('n', '<leader>cC', '<cmd>ClaudeCode<CR>', { desc = 'Toggle Claude [C]ode' })

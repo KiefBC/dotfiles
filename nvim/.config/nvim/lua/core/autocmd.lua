@@ -23,6 +23,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- Native treesitter highlighting (Neovim 0.12+)
+vim.api.nvim_create_autocmd('FileType', {
+  desc = 'Enable treesitter highlighting',
+  group = vim.api.nvim_create_augroup('treesitter-highlight', { clear = true }),
+  callback = function(ev)
+    pcall(vim.treesitter.start, ev.buf)
+  end,
+})
+
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
