@@ -29,6 +29,7 @@ vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup('treesitter-highlight', { clear = true }),
   callback = function(ev)
     pcall(vim.treesitter.start, ev.buf)
+    vim.bo[ev.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
   end,
 })
 

@@ -3,9 +3,11 @@ return {
   -- https://github.com/catppuccin/nvim
   'catppuccin/nvim',
   name = 'catppuccin',
+  lazy = false,
+  priority = 1000,
   config = function()
     require('catppuccin').setup {
-      flavour = 'mocha', -- choose your Catppuccin flavor: latte, frappe, macchiato, mocha
+      flavour = 'macchiato',
       transparent_background = true,
       integrations = {
         blink_cmp = true,
@@ -16,6 +18,6 @@ return {
         notifier = true,
       },
     }
-    -- vim.cmd 'colorscheme catppuccin'
+    vim.cmd 'colorscheme catppuccin'
   end,
 }

@@ -283,6 +283,7 @@ keymap.set('n', '<leader>xs', '<cmd>Trouble symbols toggle focus=false<cr>', { d
 keymap.set('n', '<leader>xl', '<cmd>Trouble lsp toggle focus=false win.position=right<cr>', { desc = 'E[x]tra [L]SP References' })
 keymap.set('n', '<leader>xL', '<cmd>Trouble loclist toggle<cr>', { desc = 'E[x]tra [L]ocation List' })
 keymap.set('n', '<leader>xq', '<cmd>Trouble qflist toggle<cr>', { desc = 'E[x]tra [Q]uickfix List' })
+keymap.set('n', '<leader>xc', function() Snacks.picker.colorschemes() end, { desc = 'E[x]tra [C]olorschemes' })
 
 -- ===================================================================
 -- CODE COMPILATION (Compiler.nvim)

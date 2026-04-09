@@ -1,7 +1,6 @@
 return {
   'scottmckendry/cyberdream.nvim',
-  lazy = false,
-  priority = 1000,
+  lazy = true,
   config = function()
     require('cyberdream').setup {
       -- Use solid background
@@ -14,7 +13,6 @@ return {
       terminal_colors = true,
     }
 
-    -- Set as active colorscheme
-    vim.cmd 'colorscheme cyberdream'
+    -- vim.cmd 'colorscheme cyberdream'
   end,
 }
