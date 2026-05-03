@@ -6,19 +6,10 @@ return {
   version = '^5',
   lazy = false,
   ft = { 'rust' },
-  dependencies = {
-    'adaszko/tree_climber_rust.nvim',
-  },
   config = function()
     vim.g.rustaceanvim = {
       server = {
         on_attach = function(client, bufnr)
-          -- Tree climber keybindings for Rust
-          local opts = { noremap = true, silent = true, buffer = bufnr }
-          vim.keymap.set('n', 's', '<cmd>lua require("tree_climber_rust").init_selection()<CR>', opts)
-          vim.keymap.set('x', 's', '<cmd>lua require("tree_climber_rust").select_incremental()<CR>', opts)
-          vim.keymap.set('x', 'S', '<cmd>lua require("tree_climber_rust").select_previous()<CR>', opts)
-
           -- Use standard LSP code action with Telescope picker (same as other languages)
           vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { silent = true, buffer = bufnr, desc = '[C]ode [A]ction' })
           vim.keymap.set('x', '<leader>ca', vim.lsp.buf.code_action, { silent = true, buffer = bufnr, desc = '[C]ode [A]ction' })

@@ -8,7 +8,6 @@ return {
   config = function()
     require('catppuccin').setup {
       flavour = 'macchiato',
-      transparent_background = true,
       integrations = {
         blink_cmp = true,
         dashboard = true,
@@ -16,8 +15,9 @@ return {
         mason = true,
         noice = true,
         notifier = true,
+        snacks = { enabled = true },
       },
     }
-    vim.cmd 'colorscheme catppuccin'
+    -- vim.cmd 'colorscheme catppuccin'
   end,
 }

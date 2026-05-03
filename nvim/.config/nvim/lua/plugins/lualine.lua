@@ -21,7 +21,7 @@ return {
 
     require('lualine').setup {
       options = {
-        theme = 'auto',
+        theme = 'eldritch', -- auto before
       },
       sections = {
         lualine_x = {
