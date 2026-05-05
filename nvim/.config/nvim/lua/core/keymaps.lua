@@ -138,16 +138,6 @@ keymap.set('n', '[t', function()
 end, { desc = 'Jump to previous todo' })
 
 -- ===================================================================
--- INLAY HINTS (LSP)
--- ===================================================================
-
-if vim.client and vim.client.supports_method 'textDocument/inlayHint' then
-  keymap.set('n', '<leader>th', function()
-    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-  end, { desc = '[T]oggle Inlay [H]ints' })
-end
-
--- ===================================================================
 -- GIT OPERATIONS (Gitsigns)
 -- ===================================================================
 
