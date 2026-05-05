@@ -19,15 +19,30 @@ return {
       return string.format('%s %02d:%02d', state.mode:gsub('^%l', string.upper), mins, secs)
     end
 
+    local function macro_recording()
+      local reg = vim.fn.reg_recording()
+      if reg == '' then
+        return ''
+      end
+      return 'recording @' .. reg
+    end
+
     require('lualine').setup {
       options = {
         theme = 'eldritch', -- auto before
       },
       sections = {
         lualine_x = {
+          { macro_recording, color = { fg = '#ff5555', gui = 'bold' } },
           get_timerly_status,
         },
       },
     }
+
+    vim.api.nvim_create_autocmd({ 'RecordingEnter', 'RecordingLeave' }, {
+      callback = function()
+        require('lualine').refresh()
+      end,
+    })
   end,
 }

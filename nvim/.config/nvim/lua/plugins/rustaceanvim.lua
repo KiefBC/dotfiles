@@ -3,7 +3,7 @@ return {
   -- Rustacean does all of this for us.
   -- https://github.com/mrcjkb/rustaceanvim
   'mrcjkb/rustaceanvim',
-  version = '^5',
+  version = '^9',
   lazy = false,
   ft = { 'rust' },
   config = function()
