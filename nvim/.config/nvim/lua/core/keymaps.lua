@@ -23,8 +23,11 @@ keymap.set('n', '<leader>tc', ':tabclose<CR>', { desc = '[T]ab [C]lose' })
 keymap.set('n', '<leader>tn', ':tabnext<CR>', { desc = '[T]ab [N]ext' })
 keymap.set('n', '<leader>tp', ':tabprevious<CR>', { desc = '[T]ab [P]revious' })
 
--- LSP hover
-keymap.set('n', 'K', vim.lsp.buf.hover, {})
+-- LSP hover (closure, not a direct reference: noice replaces
+-- vim.lsp.buf.hover after startup, so it must be looked up at keypress time)
+keymap.set('n', 'K', function()
+  vim.lsp.buf.hover()
+end, { desc = 'LSP Hover Documentation' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
