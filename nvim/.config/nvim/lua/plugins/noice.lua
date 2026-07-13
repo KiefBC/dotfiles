@@ -11,6 +11,9 @@ return {
   },
   config = function()
     require('noice').setup {
+      presets = {
+        lsp_doc_border = true, -- rounded border on LSP hover (K) and signature help
+      },
       views = {
         cmdline_popup = {
           position = {
