@@ -24,6 +24,9 @@ return {
   ---@type blink.cmp.Config
   opts = {
     completion = {
+      accept = {
+        auto_brackets = { enabled = false },
+      },
       documentation = {
         auto_show = true,
         window = { border = 'single' },
@@ -57,6 +60,12 @@ return {
     keymap = {
       preset = 'super-tab',
       ['<Tab>'] = {
+        function(cmp)
+          if cmp.snippet_active() then
+            return cmp.accept()
+          end
+          return cmp.select_and_accept()
+        end,
         'snippet_forward',
         function()
           local ok, sidekick = pcall(require, 'sidekick')
@@ -64,14 +73,13 @@ return {
             return sidekick.nes_jump_or_apply()
           end
         end,
-        function()
-          local ok, suggestion = pcall(require, 'copilot.suggestion')
-          if ok and suggestion.is_visible() then
-            suggestion.accept()
-            return true
-          end
-        end,
-        'select_and_accept',
+        -- function()
+        --   -- local ok, suggestion = pcall(require, 'copilot.suggestion')
+        --   -- if ok and suggestion.is_visible() then
+        --   --   suggestion.accept()
+        --   --   return true
+        --   -- end
+        -- end,
         'fallback',
       },
     },
@@ -80,7 +88,7 @@ return {
       nerd_font_variant = 'mono',
       -- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot
       kind_icons = {
-          Text = '󰉿',
+        Text = '󰉿',
         Method = '󰊕',
         Function = '󰊕',
         Constructor = '󰒓',

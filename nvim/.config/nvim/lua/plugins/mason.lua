@@ -30,7 +30,7 @@ return {
           'shfmt',
           'sqls',
           'goimports',
-          'sql-formatter',
+          'sqruff',
           -- Linters
           'ruff',
           'pylint',

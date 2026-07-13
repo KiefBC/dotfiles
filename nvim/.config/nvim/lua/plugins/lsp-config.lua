@@ -140,9 +140,31 @@ return {
       vim.lsp.config['gopls'] = {}
 
       -- SQL Language Server
+      -- Connections are read from $XDG_CONFIG_HOME/sqls/config.yml (global),
+      -- a project-local config.yml, or the `settings.sqls.connections` block below.
       vim.lsp.config['sqls'] = {
+        filetypes = { 'sql', 'mysql' },
+        root_markers = { 'config.yml', '.git' },
+        -- settings = {
+        --   sqls = {
+        --     connections = {
+        --       {
+        --         alias = 'local_pg',
+        --         driver = 'postgresql',
+        --         dataSourceName = 'host=127.0.0.1 port=5432 user=postgres password=postgres dbname=mydb sslmode=disable',
+        --       },
+        --     },
+        --   },
+        -- },
+      }
+
+      -- sqruff: SQL linter (live diagnostics). Formatting is handled by
+      -- conform.nvim (see conform.lua). Runs alongside sqls, which provides
+      -- completion and DB connections. Set the dialect via a `.sqruff` file.
+      vim.lsp.config['sqruff'] = {
+        cmd = { 'sqruff', 'lsp' },
         filetypes = { 'sql' },
-        root_markers = { '.sqls.yaml', '.git' },
+        root_markers = { '.sqruff', '.git' },
       }
 
       -- Enable all configured LSP servers
@@ -162,6 +184,7 @@ return {
         'emmet_ls',
         'gopls',
         'sqls',
+        'sqruff',
       }
     end,
   },

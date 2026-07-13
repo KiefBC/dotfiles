@@ -24,7 +24,7 @@ return { -- Autoformat
     formatters_by_ft = {
       go = { 'goimports' },
       lua = { 'stylua' },
-      sql = { 'sql_formatter' },
+      sql = { 'sqruff' },
       -- Conform can also run multiple formatters sequentially
       -- python = { 'isort', 'black' },
       python = {
