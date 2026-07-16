@@ -1,0 +1,110 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "git_panel": {
+    "dock": "left",
+    "tree_view": false
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "context_servers": {
+    "svelte-mcp": {
+      "enabled": false,
+      "remote": false,
+      "settings": {}
+    },
+    "mcp-server-context7": {
+      "enabled": true,
+      "settings": {
+        "context7_api_key": "ctx7sk-af9e2e9a-8fe1-4ed7-ae88-78a4d082bb46"
+      }
+    }
+  },
+  "prettier": {
+    "allowed": false
+  },
+  "inlay_hints": {
+    "show_background": true,
+    "enabled": true
+  },
+  "toolbar": {
+    "code_actions": false
+  },
+  "relative_line_numbers": "enabled",
+  "icon_theme": "Catppuccin Frappé",
+  "agent": {
+    "dock": "right",
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-opus-4.6"
+    },
+    "notify_when_agent_waiting": "all_screens",
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "commit_message_model": {
+      "provider": "lmstudio",
+      "model": "google/gemma-3-4b"
+    }
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": "Eldritch Deeper",
+  "experimental.theme_overrides": {
+    "background.appearance": "blurred",
+    "background": "#00000000", // 171928bf
+    "editor.background": "#00000000", // 171928bf
+    "terminal.background": "#00000000",// 0f101abf
+    "panel.background": "#00000000", // 131425bf
+    "tab_bar.background": "#00000000",// 171928bf
+    "title_bar.background": "#00000000",// 171928bf
+    "status_bar.background": "#00000000",// 171928bf
+    "toolbar.background": "#00000000",// 171928bf
+    "tab.active_background": "#171928bf",// 171928bf
+    "tab.inactive_background": "#090a14bf", // 090a14bf
+    "surface.background": "#00000000", // 131425bf
+    "elevated_surface.background": "#00000000" // 131425bf
+  },
+  "lsp": {
+    //
+  },
+  "load_direnv": "shell_hook",
+  "terminal": {
+    "shell": {
+      "with_arguments": {
+        "program": "/Users/kiefer/.nix-profile/bin/direnv",
+        "args": ["exec", ".", "/bin/zsh", "-l"]
+      }
+    }
+  },
+  "languages": {
+    "Nix": {
+      "language_servers": [
+        "nixd",
+        "!nil"
+      ]
+    }
+  }
+}
