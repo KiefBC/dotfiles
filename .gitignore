@@ -4,3 +4,7 @@ helix/.config/helix/runtime/grammars/sources/
 nvim/.config/github-copilot/apps.json
 
 **/.DS_Store
+
+# Claude Code runtime artifacts (written through the ~/.claude symlinks)
+claude/.claude/hooks/fire.log
+claude/.claude/hooks/__pycache__/
