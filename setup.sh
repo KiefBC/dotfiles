@@ -8,6 +8,18 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+# Stow packages to back up and deploy
+STOW_PACKAGES=(nvim helix wezterm lazygit ghostty zed claude)
+
+# Stow target for a package: claude lives at ~/.claude, everything else at ~/.config/<pkg>
+stow_target() {
+    if [ "$1" = "claude" ]; then
+        echo "$HOME/.claude"
+    else
+        echo "$HOME/.config/$1"
+    fi
+}
+
 # Function to print colored output
 print_status() {
     echo -e "${GREEN}[INFO]${NC} $1"
@@ -92,15 +104,18 @@ backup_configs() {
     local backup_dir="$HOME/.config_backup_$(date +%Y%m%d_%H%M%S)"
     local made_backup=false
     
-    for dir in nvim helix wezterm lazygit; do
-        if [ -d "$HOME/.config/$dir" ]; then
+    for pkg in "${STOW_PACKAGES[@]}"; do
+        local target
+        target="$(stow_target "$pkg")"
+        # Skip symlinked targets — those are already stowed from this repo
+        if [ -d "$target" ] && [ ! -L "$target" ]; then
             if [ "$made_backup" = false ]; then
                 print_status "Creating backup of existing configurations at $backup_dir"
                 mkdir -p "$backup_dir"
                 made_backup=true
             fi
-            cp -r "$HOME/.config/$dir" "$backup_dir/"
-            print_status "Backed up $dir configuration"
+            cp -r "$target" "$backup_dir/$pkg"
+            print_status "Backed up $pkg configuration"
         fi
     done
 }
@@ -114,12 +129,12 @@ deploy_dotfiles() {
     cd "$SCRIPT_DIR"
     
     # Deploy each configuration
-    for dir in nvim helix wezterm lazygit; do
-        if [ -d "$dir" ]; then
-            print_status "Deploying $dir configuration..."
-            stow -v "$dir"
+    for pkg in "${STOW_PACKAGES[@]}"; do
+        if [ -d "$pkg" ]; then
+            print_status "Deploying $pkg configuration..."
+            stow -v "$pkg"
         else
-            print_warning "Directory $dir not found, skipping..."
+            print_warning "Directory $pkg not found, skipping..."
         fi
     done
 }
@@ -139,7 +154,13 @@ install_additional_requirements() {
     
     # Install tree-sitter CLI for Neovim
     install_with_brew tree-sitter
-    
+
+    # Install bat for fzf-lua previews
+    install_with_brew bat
+
+    # Install Go toolchain (gopls and delve need it at runtime)
+    install_with_brew go
+
     # Install language servers and tools
     print_status "Installing language servers and development tools..."
     
@@ -155,7 +176,6 @@ install_additional_requirements() {
     
     # Install Nerd Font
     print_status "Installing JetBrainsMono Nerd Font..."
-    brew tap homebrew/cask-fonts
     install_with_brew font-jetbrains-mono-nerd-font true
 }
 
@@ -177,6 +197,9 @@ main() {
     install_with_brew helix
     install_with_brew wezterm true  # WezTerm is a cask
     install_with_brew lazygit
+    install_with_brew ghostty true
+    install_with_brew zed true
+    install_with_brew claude-code true
     
     # Install Node.js and npm
     install_node
@@ -202,8 +225,9 @@ main() {
     print_status "Post-installation notes:"
     echo "  - Neovim will install plugins on first launch"
     echo "  - You may need to run :checkhealth in Neovim to verify everything is working"
-    echo "  - WezTerm configuration is ready to use"
+    echo "  - WezTerm, Ghostty, and Zed configurations are ready to use"
     echo "  - LazyGit is configured to use Neovim as the default editor"
+    echo "  - Claude Code config (settings, hooks, skills) is deployed to ~/.claude"
 }
 
 # Run main function
