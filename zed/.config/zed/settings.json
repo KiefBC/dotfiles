@@ -74,18 +74,23 @@
   "theme": "Eldritch Deeper",
   "experimental.theme_overrides": {
     "background.appearance": "blurred",
-    "background": "#00000000", // 171928bf
-    "editor.background": "#00000000", // 171928bf
-    "terminal.background": "#00000000",// 0f101abf
-    "panel.background": "#00000000", // 131425bf
-    "tab_bar.background": "#00000000",// 171928bf
-    "title_bar.background": "#00000000",// 171928bf
-    "status_bar.background": "#00000000",// 171928bf
-    "toolbar.background": "#00000000",// 171928bf
-    "tab.active_background": "#171928bf",// 171928bf
-    "tab.inactive_background": "#090a14bf", // 090a14bf
-    "surface.background": "#00000000", // 131425bf
-    "elevated_surface.background": "#00000000" // 131425bf
+    // theme's own per-surface colors at 0.8 alpha (theme opaque values in comments)
+    "background": "#171928cc", // 171928
+    "editor.background": "#171928cc", // 171928
+    "editor.gutter.background": "#171928cc", // 171928
+    "terminal.background": "#0f101acc", // 0f101a
+    "panel.background": "#131425cc", // 131425
+    "tab_bar.background": "#0f101acc", // 0f101a
+    "title_bar.background": "#0f101acc", // 0f101a
+    "status_bar.background": "#0f101acc", // 0f101a
+    "toolbar.background": "#171928cc", // 171928
+    "tab.active_background": "#171928cc", // 171928
+    "tab.inactive_background": "#090a14cc", // 090a14
+    "surface.background": "#131425cc", // 131425
+    "elevated_surface.background": "#131425cc", // 131425
+    // borders brightened so pane breaks stay visible through the blur
+    "border": "#343a55", // 252738
+    "pane_group.border": "#7081d080" // 7081d030
   },
   "lsp": {
     //
