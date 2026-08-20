@@ -1,0 +1,65 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^Bash$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODEX_HOOK_MODE=pretool python3 ~/.codex/hooks/codex_hook.py",
+            "statusMessage": "Checking Bash policy hooks",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "^(apply_patch|Edit|Write)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODEX_HOOK_MODE=pretool python3 ~/.codex/hooks/codex_hook.py",
+            "statusMessage": "Checking worktree policy",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "^compact$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODEX_HOOK_MODE=session python3 ~/.codex/hooks/codex_hook.py",
+            "statusMessage": "Restoring post-compaction discipline",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODEX_HOOK_MODE=prompt python3 ~/.codex/hooks/codex_hook.py",
+            "statusMessage": "Checking prompt scope",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODEX_HOOK_MODE=stop python3 ~/.codex/hooks/codex_hook.py",
+            "statusMessage": "Checking test evidence",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -9,15 +9,14 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Stow packages to back up and deploy
-STOW_PACKAGES=(nvim helix wezterm lazygit ghostty zed claude)
+STOW_PACKAGES=(nvim helix wezterm lazygit ghostty zed claude codex)
 
-# Stow target for a package: claude lives at ~/.claude, everything else at ~/.config/<pkg>
+# Stow target for a package: agent state lives at ~/.<pkg>, app config at ~/.config/<pkg>
 stow_target() {
-    if [ "$1" = "claude" ]; then
-        echo "$HOME/.claude"
-    else
-        echo "$HOME/.config/$1"
-    fi
+    case "$1" in
+        "claude" | "codex") echo "$HOME/.$1" ;;
+        *) echo "$HOME/.config/$1" ;;
+    esac
 }
 
 # Function to print colored output
@@ -228,6 +227,7 @@ main() {
     echo "  - WezTerm, Ghostty, and Zed configurations are ready to use"
     echo "  - LazyGit is configured to use Neovim as the default editor"
     echo "  - Claude Code config (settings, hooks, skills) is deployed to ~/.claude"
+    echo "  - Codex policy and hooks are deployed to ~/.codex"
 }
 
 # Run main function

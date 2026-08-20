@@ -16,6 +16,7 @@ All documentation produced for projects and plans — implementation plans, desi
 
 # Standing policy (Kiefer)
 
-- **Never run `git commit`** (or `--amend`). Stage changes and report what's ready; I commit myself. (Enforced by a hook — don't try to work around it.)
 - **Work in a fresh git worktree** for any task that modifies files in a git repository: use EnterWorktree at the start of the task, before editing. Editing tracked files in a main checkout triggers a permission gate.
+- **Commit completed, verified work in the task worktree** unless I explicitly ask you not to. Commit only task-scoped changes. Run `git commit` directly from the linked worktree, or use `git -C <absolute-worktree> commit`; never commit from the repository's main checkout. (Enforced by a hook.)
+- **Always include a copyable merge command in the final response for worktree tasks**, together with the committed branch name and SHA. Use `git -C <absolute-main-checkout> merge <branch>` for a named branch, or `git -C <absolute-main-checkout> merge <commit-sha>` for a detached worktree.
 - **Never delete broadly.** No `rm -rf` on `/`, system dirs, home, top-level project dirs, bare `*`, or unexpanded `$VARS` (enforced by a hook). Delete specific, explicit paths only.
