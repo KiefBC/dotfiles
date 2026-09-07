@@ -7,9 +7,13 @@ map("n", "<Esc>", "<cmd>nohlsearch<CR>", {
 	desc = "Clear Search Highlight",
 })
 
+-- Window navigation
+map("n", "<C-h>", "<C-w><C-h>", { desc = "Move Focus to the Left Window" })
+map("n", "<C-l>", "<C-w><C-l>", { desc = "Move Focus to the Right Window" })
+map("n", "<C-j>", "<C-w><C-j>", { desc = "Move Focus to the Lower Window" })
+map("n", "<C-k>", "<C-w><C-k>", { desc = "Move Focus to the Upper Window" })
+
 -- == Convienence Keys ==
-map("n", "<leader>w", "<cmd>write<CR>", { desc = "Write Buffer" })
-map("n", "<leader>q", "<cmd>quit<CR>", { desc = "Quit Neovim" })
 map("n", "<leader>r", function()
 	package.loaded["config.options"] = nil
 	package.loaded["config.keymaps"] = nil
