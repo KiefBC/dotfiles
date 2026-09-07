@@ -5,6 +5,9 @@
 font-size = 16
 font-thicken = true
 font-thicken-strength = 191
+font-family = "Iosevka Term"
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 14
 
 # Colors
 foreground = #b2bec3
