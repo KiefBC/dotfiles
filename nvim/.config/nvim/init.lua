@@ -283,6 +283,9 @@ blink.setup({
 		nerd_font_variant = "mono",
 	},
 
+	-- The menu and documentation windows take their border from
+	-- vim.o.winborder (set in config/options.lua); without it they default to
+	-- `padded`, which is blank cells and shows no edge at all.
 	completion = {
 		documentation = {
 			auto_show = true,
