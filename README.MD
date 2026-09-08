@@ -4,7 +4,8 @@ Personal development environment configurations managed with GNU Stow.
 
 ## Tools
 
-- **[Neovim](nvim/)** - Kickstart-based setup with LSP, Telescope, Copilot
+- **[Neovim](nvim/)** - `vim.pack` setup with LSP, DAP, Mason-managed tooling
+- **[Neovim (NixOS)](nvim-nixos/)** - the same config with Mason removed; the toolchain comes from `configuration.nix`
 - **[Helix](helix/)** - Modern modal editor
 - **[WezTerm](wezterm/)** - GPU-accelerated terminal
 - **[Ghostty](ghostty/)** - Fast, native terminal
@@ -40,7 +41,13 @@ Organized using GNU Stow convention:
 tool-name/.config/tool-name/
 ```
 
-Stow creates symlinks from `~/.config/tool-name` to this repository. The `claude` package is the exception: it symlinks into `~/.claude`.
+Stow creates symlinks from `~/.config/tool-name` to this repository. `claude` and `codex` are the exceptions: they symlink into `~/.claude` and `~/.codex`.
+
+`nvim` and `nvim-nixos` both target `~/.config/nvim`, so only one can be stowed at a time. Only `nvim` is in `setup.sh`'s package list; swap by hand:
+
+```bash
+stow -D nvim && stow nvim-nixos
+```
 
 ## License
 
