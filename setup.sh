@@ -9,7 +9,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Stow packages to back up and deploy
-STOW_PACKAGES=(nvim helix wezterm lazygit ghostty zed claude codex)
+STOW_PACKAGES=(nvim helix lazygit ghostty zed claude codex)
 
 # Stow target for a package: agent state lives at ~/.<pkg>, app config at ~/.config/<pkg>
 stow_target() {
@@ -194,7 +194,6 @@ main() {
     install_with_brew stow
     install_with_brew neovim
     install_with_brew helix
-    install_with_brew wezterm true  # WezTerm is a cask
     install_with_brew lazygit
     install_with_brew ghostty true
     install_with_brew zed true
@@ -224,7 +223,7 @@ main() {
     print_status "Post-installation notes:"
     echo "  - Neovim will install plugins on first launch"
     echo "  - You may need to run :checkhealth in Neovim to verify everything is working"
-    echo "  - WezTerm, Ghostty, and Zed configurations are ready to use"
+    echo "  - Ghostty and Zed configurations are ready to use"
     echo "  - LazyGit is configured to use Neovim as the default editor"
     echo "  - Claude Code config (settings, hooks, skills) is deployed to ~/.claude"
     echo "  - Codex policy and hooks are deployed to ~/.codex"

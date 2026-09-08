@@ -12,7 +12,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/kiefer/.claude/hooks/softener-detector.py",
+            "command": "$HOME/.claude/hooks/softener-detector.py",
             "timeout": 10
           }
         ]
@@ -24,27 +24,27 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/kiefer/.claude/hooks/dep-install-gate.py",
+            "command": "$HOME/.claude/hooks/dep-install-gate.py",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "/Users/kiefer/.claude/hooks/git-guard.py",
+            "command": "$HOME/.claude/hooks/git-guard.py",
             "timeout": 15
           },
           {
             "type": "command",
-            "command": "/Users/kiefer/.claude/hooks/secrets-guard.py",
+            "command": "$HOME/.claude/hooks/secrets-guard.py",
             "timeout": 15
           },
           {
             "type": "command",
-            "command": "/Users/kiefer/.claude/hooks/git-commit-block.py",
+            "command": "$HOME/.claude/hooks/git-commit-block.py",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "/Users/kiefer/.claude/hooks/rm-guard.py",
+            "command": "$HOME/.claude/hooks/rm-guard.py",
             "timeout": 10
           }
         ]
@@ -54,7 +54,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/kiefer/.claude/hooks/worktree-guard.py",
+            "command": "$HOME/.claude/hooks/worktree-guard.py",
             "timeout": 15
           }
         ]
@@ -65,7 +65,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/kiefer/.claude/hooks/stop-test-check.py",
+            "command": "$HOME/.claude/hooks/stop-test-check.py",
             "timeout": 15
           }
         ]
@@ -77,7 +77,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/kiefer/.claude/hooks/sessionstart-compact.py",
+            "command": "$HOME/.claude/hooks/sessionstart-compact.py",
             "timeout": 10
           }
         ]

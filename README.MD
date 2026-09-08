@@ -7,7 +7,6 @@ Personal development environment configurations managed with GNU Stow.
 - **[Neovim](nvim/)** - `vim.pack` setup with LSP, DAP, Mason-managed tooling
 - **[Neovim (NixOS)](nvim-nixos/)** - the same config with Mason removed; the toolchain comes from `configuration.nix`
 - **[Helix](helix/)** - Modern modal editor
-- **[WezTerm](wezterm/)** - GPU-accelerated terminal
 - **[Ghostty](ghostty/)** - Fast, native terminal
 - **[Zed](zed/)** - High-performance editor
 - **[LazyGit](lazygit/)** - Git TUI
@@ -17,15 +16,15 @@ Personal development environment configurations managed with GNU Stow.
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/dotfiles.git ~/dotfiles
+git clone git@github.com:KiefBC/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 
 # Install tools (macOS)
 brew install stow neovim helix lazygit
-brew install --cask wezterm ghostty zed claude-code
+brew install --cask ghostty zed claude-code
 
 # Deploy configurations
-stow nvim helix wezterm lazygit ghostty zed claude
+stow nvim helix lazygit ghostty zed claude codex
 
 # Deploy individual configs
 stow nvim

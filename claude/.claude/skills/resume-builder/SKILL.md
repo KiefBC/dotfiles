@@ -19,7 +19,7 @@ Before any line of resume content is written:
 
 ## Step 0 — Load the inventory
 
-Search the Context Vault (`/Users/kiefer/Documents/Obsidian/context-management`, via `mcp__obsidian__search_notes`) for the master **Experience Inventory** note — expected home: `Personal Projects/Resume/` — before anything else. Do not ask the user a single intake question before this vault check has run.
+Search the Context Vault (`~/Documents/Obsidian/context-management`, via `mcp__obsidian__search_notes`) for the master **Experience Inventory** note — expected home: `Personal Projects/Resume/` — before anything else. Do not ask the user a single intake question before this vault check has run.
 
 - **Found** → do NOT re-interview. Confirm currency ("anything new since <last-updated>?") and ask only for the JD. Skip to Step 2.
 - **Absent** → Step 1 builds it.

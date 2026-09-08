@@ -10,7 +10,7 @@ import shlex
 import subprocess
 import sys
 
-CLAUDE_HOOKS = "/Users/kiefer/.claude/hooks"
+CLAUDE_HOOKS = os.path.expanduser("~/.claude/hooks")
 SHELL_PUNCTUATION = frozenset(";&|()<>")
 
 

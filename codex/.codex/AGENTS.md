@@ -2,7 +2,7 @@
 
 All documentation produced for projects and plans—implementation plans, design docs/specs,
 ADRs, changelogs, research, code reviews, and similar artifacts—must be saved to the Context
-Vault at `/Users/kiefer/Documents/Obsidian/context-management` through the Obsidian MCP.
+Vault at `~/Documents/Obsidian/context-management` through the Obsidian MCP.
 Do not leave this material as loose Markdown in project repositories.
 
 - Each project has its own directory in the vault under `Personal Projects/` or `Work Projects/`,

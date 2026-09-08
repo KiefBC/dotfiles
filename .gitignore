@@ -8,3 +8,4 @@ nvim/.config/github-copilot/apps.json
 # Claude Code runtime artifacts (written through the ~/.claude symlinks)
 claude/.claude/hooks/fire.log
 claude/.claude/hooks/__pycache__/
+/codex/.codex/hooks/__pycache__

@@ -99,7 +99,7 @@
   "terminal": {
     "shell": {
       "with_arguments": {
-        "program": "/Users/kiefer/.nix-profile/bin/direnv",
+        "program": "direnv",
         "args": ["exec", ".", "/bin/zsh", "-l"]
       }
     }

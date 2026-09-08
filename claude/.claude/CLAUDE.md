@@ -1,6 +1,6 @@
 # Project documentation → Obsidian Context Vault
 
-All documentation produced for projects and plans — implementation plans, design docs/specs, ADRs, changelogs, research, code reviews — is saved to the **Context Vault**, the Obsidian vault at `/Users/kiefer/Documents/Obsidian/context-management`, via the Obsidian MCP (`mcp__obsidian__*` tools). Do not leave this material as loose markdown in project repos.
+All documentation produced for projects and plans — implementation plans, design docs/specs, ADRs, changelogs, research, code reviews — is saved to the **Context Vault**, the Obsidian vault at `~/Documents/Obsidian/context-management`, via the Obsidian MCP (`mcp__obsidian__*` tools). Do not leave this material as loose markdown in project repos.
 
 - Each project has its own directory in the vault (under `Personal Projects/` or `Work Projects/`), with subdirectories per note type: `Plans/`, `Decisions/` (ADRs), `Research/`, `Specs/`, `Guides/`, `Code Reviews/`, etc.
 - The vault root has its own `CLAUDE.md` that governs style: directory convention, templates, frontmatter, tagging, and the note-creation flow. Read it (`mcp__obsidian__read_note` with path `CLAUDE.md`) before writing to the vault.

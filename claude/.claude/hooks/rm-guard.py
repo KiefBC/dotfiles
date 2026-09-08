@@ -7,8 +7,9 @@ Policy (deny if ANY recursive-rm target hits a rule):
     /System /Library /Applications /private /Volumes /cores /Network) at any depth
   - unexpanded `$VAR`, `$(...)`, or backticks in a target (empty-var catastrophe)
   - bare `*` / `./*` outside tmp (cwd-dependent blast radius — use explicit paths)
-  - `~`, `$HOME`, or any path shallower than 4 components (/, /Users, /Users/kiefer,
-    /Users/kiefer/<top-level>) — deleting a whole project dir requires the user
+  - `~`, `$HOME`, or any path shallower than 4 components (/, /home, /home/<user>,
+    /home/<user>/<top-level>; likewise /Users/... on macOS) — deleting a whole
+    project dir requires the user
   - `xargs rm -r` (targets unknowable from the command text)
 Tmp locations (/tmp, /private/tmp, /var/folders, $TMPDIR) are always allowed.
 Non-recursive rm is never touched. Fails open on script errors.
